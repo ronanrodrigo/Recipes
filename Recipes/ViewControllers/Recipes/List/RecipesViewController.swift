@@ -13,7 +13,7 @@ protocol RecipesViewControllerDelegate {
 }
 
 class RecipesViewController: UIViewController {
-    var delegate: RecipesViewControllerDelegate
+    var delegate: RecipesViewControllerDelegate?
     var tableView: UITableView = UITableView()
     var tableViewDataSource: RecipesTableViewDataSource?
     var tableViewDelegate: RecipesTableViewDelegate?
@@ -24,7 +24,8 @@ class RecipesViewController: UIViewController {
     }
 
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        self.delegate = nil
+        super.init(coder: aDecoder)
     }
 
     override func viewDidLoad() {
@@ -40,7 +41,9 @@ class RecipesViewController: UIViewController {
     }
     
     func newRecipe(){
-        delegate.newRecipeTapped()
+        if let delegate = self.delegate {
+            delegate.newRecipeTapped()
+        }
     }
     
     func createTableView() {
