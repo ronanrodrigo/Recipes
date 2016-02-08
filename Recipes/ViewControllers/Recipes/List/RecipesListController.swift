@@ -47,7 +47,7 @@ class RecipesListController: UIViewController {
     }
     
     func createTableView() {
-        tableViewDataSource = RecipesListDataSource(recipes: ["Bolo de cenoura", "Bolo de chocolate"], cellIdentifier: "RecipeCell")
+        tableViewDataSource = RecipesListDataSource(recipes: ["Carrot cake", "Chocolate cake"], cellIdentifier: "RecipeCell")
         tableView.dataSource = tableViewDataSource
         
         tableViewDelegate = RecipesListDelegate()

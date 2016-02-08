@@ -15,6 +15,8 @@ protocol RecipesFormControllerDelegate {
 
 class RecipesFormController: UIViewController {
     var delegate: RecipesFormControllerDelegate?
+    var tableView: UITableView!
+    var tableViewDataSource: RecipesFormDataSource?
     
     init(delegate: RecipesFormControllerDelegate) {
         self.delegate = delegate
@@ -24,6 +26,31 @@ class RecipesFormController: UIViewController {
     required init?(coder aDecoder: NSCoder) {
         self.delegate = nil
         super.init(coder: aDecoder)
+    }
+    
+    override func viewDidLoad() {
+        createTableView()
+        configureNavigation()
+    }
+    
+    
+    func configureNavigation() {
+        navigationItem.title = "New recipe"
+        let addButton = UIBarButtonItem(barButtonSystemItem: .Save, target: self, action: "saveRecipeTapped")
+        navigationItem.rightBarButtonItem = addButton
+    }
+    
+    func saveRecipeTapped() {
+        self.delegate?.saveRecipeTapped()
+    }
+    
+    func createTableView() {
+        self.tableView = UITableView(frame: view.frame, style: .Grouped)
+        tableViewDataSource = RecipesFormDataSource(cellIdentifier: "RecipesFormCell")
+        tableView.dataSource = tableViewDataSource
+        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "RecipesFormCell")
+        tableView.frame = view.frame
+        view.addSubview(tableView)
     }
     
     

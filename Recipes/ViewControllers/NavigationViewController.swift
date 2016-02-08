@@ -22,13 +22,14 @@ class NavigationViewController: UINavigationController, RecipesListControllerDel
     // MARK: RecipesViewControllerDelegate
     
     func newRecipeTapped() {
-        NSLog("newRecipeTapped")
+        let recipesFormController = RecipesFormController(delegate: self)
+        self.pushViewController(recipesFormController, animated: true)
     }
     
     // MARK: RecipesFormControllerDelegate
     
     func saveRecipeTapped() {
-        NSLog("saveRecipeTapped")
+        self.popViewControllerAnimated(true)
     }
 
 }
