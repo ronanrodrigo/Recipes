@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class RecipesTableViewDelegate: NSObject, UITableViewDelegate {
+class RecipesListDelegate: NSObject, UITableViewDelegate {
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         NSLog("willDisplayCell %d %d", indexPath.row, indexPath.section)
     }

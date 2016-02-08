@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class RecipesTableViewDataSource: NSObject, UITableViewDataSource {
+class RecipesListDataSource: NSObject, UITableViewDataSource {
     var recipes: [String]
     var cellIdentifier: String
     

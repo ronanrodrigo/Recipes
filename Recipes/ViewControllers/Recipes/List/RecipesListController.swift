@@ -8,17 +8,17 @@
 
 import UIKit
 
-protocol RecipesViewControllerDelegate {
+protocol RecipesListControllerDelegate {
     func newRecipeTapped()
 }
 
-class RecipesViewController: UIViewController {
-    var delegate: RecipesViewControllerDelegate?
+class RecipesListController: UIViewController {
+    var delegate: RecipesListControllerDelegate?
     var tableView: UITableView = UITableView()
-    var tableViewDataSource: RecipesTableViewDataSource?
-    var tableViewDelegate: RecipesTableViewDelegate?
+    var tableViewDataSource: RecipesListDataSource?
+    var tableViewDelegate: RecipesListDelegate?
     
-    init(delegate: RecipesViewControllerDelegate) {
+    init(delegate: RecipesListControllerDelegate) {
         self.delegate = delegate
         super.init(nibName: nil, bundle: nil)
     }
@@ -47,10 +47,10 @@ class RecipesViewController: UIViewController {
     }
     
     func createTableView() {
-        tableViewDataSource = RecipesTableViewDataSource(recipes: ["Bolo de cenoura", "Bolo de chocolate"], cellIdentifier: "RecipeCell")
+        tableViewDataSource = RecipesListDataSource(recipes: ["Bolo de cenoura", "Bolo de chocolate"], cellIdentifier: "RecipeCell")
         tableView.dataSource = tableViewDataSource
         
-        tableViewDelegate = RecipesTableViewDelegate()
+        tableViewDelegate = RecipesListDelegate()
         tableView.delegate = tableViewDelegate
         
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "RecipeCell")
