@@ -9,7 +9,7 @@
 import UIKit
 
 protocol RecipesViewControllerDelegate {
-    func didTappedAdd()
+    func newRecipeTapped()
 }
 
 class RecipesViewController: UIViewController {
@@ -40,7 +40,7 @@ class RecipesViewController: UIViewController {
     }
     
     func newRecipe(){
-        delegate.didTappedAdd()
+        delegate.newRecipeTapped()
     }
     
     func createTableView() {
