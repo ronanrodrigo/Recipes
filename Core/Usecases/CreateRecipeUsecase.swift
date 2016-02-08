@@ -16,12 +16,11 @@ class CreateRecipeUsecase {
     }
 
     func create(recipe: Recipe) throws {
-        let validateRecipe = recipe.validate()
-        if validateRecipe.valid {
+        if recipe.isValid() {
             let savedRecipe = self.gateway.create(recipe)
             self.presenter.show(savedRecipe)
         } else {
-            throw validateRecipe.errors.first!
+            throw recipe.error()
         }
     }
 }
