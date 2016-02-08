@@ -11,7 +11,7 @@ import UIKit
 class NavigationViewController: UINavigationController {
 
     override func viewDidLoad() {
-        let controller = RecipesTableViewController()
+        let controller = RecipesViewController()
         self.setViewControllers([controller], animated: false)
     }
 
