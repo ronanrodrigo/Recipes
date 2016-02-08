@@ -7,5 +7,5 @@
 //
 
 protocol RecipeGateway {
-    func create(recipe: Recipe) -> Recipe
+  func create(recipe: Recipe) -> Recipe
 }

@@ -7,13 +7,13 @@
 //
 
 protocol Ingredient {
-    var title: String { get }
-    var quantity: Double { get }
-    var measureUnity: MeasureUnity { get }
+  var title: String { get }
+  var quantity: Double { get }
+  var measureUnity: MeasureUnity { get }
 }
 
 struct IngredientStruct: Ingredient {
-    var title: String
-    var quantity: Double
-    var measureUnity: MeasureUnity
+  var title: String
+  var quantity: Double
+  var measureUnity: MeasureUnity
 }

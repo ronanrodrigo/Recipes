@@ -9,53 +9,53 @@
 import UIKit
 
 protocol RecipesListControllerDelegate {
-    func newRecipeTapped()
+  func newRecipeTapped()
 }
 
 class RecipesListController: UIViewController {
-    var delegate: RecipesListControllerDelegate?
-    var tableView: UITableView = UITableView()
-    var tableViewDataSource: RecipesListDataSource?
-    var tableViewDelegate: RecipesListDelegate?
+  var delegate: RecipesListControllerDelegate?
+  var tableView: UITableView = UITableView()
+  var tableViewDataSource: RecipesListDataSource?
+  var tableViewDelegate: RecipesListDelegate?
+  
+  init(delegate: RecipesListControllerDelegate) {
+    self.delegate = delegate
+    super.init(nibName: nil, bundle: nil)
+  }
+  
+  required init?(coder aDecoder: NSCoder) {
+    self.delegate = nil
+    super.init(coder: aDecoder)
+  }
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    configureNavigation()
+    createTableView()
+  }
+  
+  func configureNavigation() {
+    navigationItem.title = "Recipes"
+    let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "newRecipe")
+    navigationItem.rightBarButtonItem = addButton
+  }
+  
+  func newRecipe(){
+    if let delegate = self.delegate {
+      delegate.newRecipeTapped()
+    }
+  }
+  
+  func createTableView() {
+    tableViewDataSource = RecipesListDataSource(recipes: ["Carrot cake", "Chocolate cake"], cellIdentifier: "RecipeCell")
+    tableView.dataSource = tableViewDataSource
     
-    init(delegate: RecipesListControllerDelegate) {
-        self.delegate = delegate
-        super.init(nibName: nil, bundle: nil)
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        self.delegate = nil
-        super.init(coder: aDecoder)
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        configureNavigation()
-        createTableView()
-    }
+    tableViewDelegate = RecipesListDelegate()
+    tableView.delegate = tableViewDelegate
     
-    func configureNavigation() {
-        navigationItem.title = "Recipes"
-        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "newRecipe")
-        navigationItem.rightBarButtonItem = addButton
-    }
-    
-    func newRecipe(){
-        if let delegate = self.delegate {
-            delegate.newRecipeTapped()
-        }
-    }
-    
-    func createTableView() {
-        tableViewDataSource = RecipesListDataSource(recipes: ["Carrot cake", "Chocolate cake"], cellIdentifier: "RecipeCell")
-        tableView.dataSource = tableViewDataSource
-        
-        tableViewDelegate = RecipesListDelegate()
-        tableView.delegate = tableViewDelegate
-        
-        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "RecipeCell")
-        tableView.frame = view.frame
-        view.addSubview(self.tableView)
-    }
-
+    tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "RecipeCell")
+    tableView.frame = view.frame
+    view.addSubview(self.tableView)
+  }
+  
 }

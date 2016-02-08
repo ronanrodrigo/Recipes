@@ -7,9 +7,9 @@
 //
 
 class ShowSavedRecipeFake: ShowSavedRecipe {
-    var showed: Bool = false
-    
-    func show(recipe: Recipe) {
-        self.showed = true
-    }
+  var showed: Bool = false
+  
+  func show(recipe: Recipe) {
+    self.showed = true
+  }
 }

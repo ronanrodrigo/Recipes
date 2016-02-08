@@ -7,14 +7,14 @@
 //
 
 class RecipeGatewayFake: RecipeGateway {
-    var recipes: [Recipe]
-    
-    init() {
-        recipes = []
-    }
-    
-    func create(recipe: Recipe) -> Recipe {
-        recipes.append(recipe)
-        return recipe
-    }
+  var recipes: [Recipe]
+  
+  init() {
+    recipes = []
+  }
+  
+  func create(recipe: Recipe) -> Recipe {
+    recipes.append(recipe)
+    return recipe
+  }
 }

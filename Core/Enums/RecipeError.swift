@@ -7,11 +7,11 @@
 //
 
 enum RecipeError: ErrorType {
-    case EmptyTitle
-    
-    func description() -> String {
-        switch self {
-            case .EmptyTitle: return "EmptyTitle"
-        }
+  case EmptyTitle
+  
+  func description() -> String {
+    switch self {
+    case .EmptyTitle: return "EmptyTitle"
     }
+  }
 }
