@@ -8,15 +8,19 @@
 
 import UIKit
 
-class NavigationViewController: UINavigationController {
+class NavigationViewController: UINavigationController, RecipesViewControllerDelegate {
 
     override func viewDidLoad() {
-        let controller = RecipesViewController()
+        let controller = RecipesViewController(delegate: self)
         self.setViewControllers([controller], animated: false)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func didTappedAdd() {
+        NSLog("didTappedAdd")
     }
 
 }

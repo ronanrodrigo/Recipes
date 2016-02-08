@@ -8,10 +8,24 @@
 
 import UIKit
 
+protocol RecipesViewControllerDelegate {
+    func didTappedAdd()
+}
+
 class RecipesViewController: UIViewController {
+    var delegate: RecipesViewControllerDelegate
     var tableView: UITableView = UITableView()
-    var dataSource: RecipesTableViewDataSource?
-    var delegate: RecipesTableViewDelegate?
+    var tableViewDataSource: RecipesTableViewDataSource?
+    var tableViewDelegate: RecipesTableViewDelegate?
+    
+    init(delegate: RecipesViewControllerDelegate) {
+        self.delegate = delegate
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,14 +35,20 @@ class RecipesViewController: UIViewController {
     
     func configureNavigation() {
         navigationItem.title = "Recipes"
+        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "newRecipe")
+        navigationItem.rightBarButtonItem = addButton
+    }
+    
+    func newRecipe(){
+        delegate.didTappedAdd()
     }
     
     func createTableView() {
-        dataSource = RecipesTableViewDataSource(recipes: ["Bolo de cenoura", "Bolo de chocolate"], cellIdentifier: "RecipeCell")
-        tableView.dataSource = dataSource
+        tableViewDataSource = RecipesTableViewDataSource(recipes: ["Bolo de cenoura", "Bolo de chocolate"], cellIdentifier: "RecipeCell")
+        tableView.dataSource = tableViewDataSource
         
-        delegate = RecipesTableViewDelegate()
-        tableView.delegate = delegate
+        tableViewDelegate = RecipesTableViewDelegate()
+        tableView.delegate = tableViewDelegate
         
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "RecipeCell")
         tableView.frame = view.frame
