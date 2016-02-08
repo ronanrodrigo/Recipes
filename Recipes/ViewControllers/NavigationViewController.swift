@@ -19,6 +19,8 @@ class NavigationViewController: UINavigationController, RecipesViewControllerDel
         super.didReceiveMemoryWarning()
     }
     
+    // MARK: RecipesViewControllerDelegate
+    
     func newRecipeTapped() {
         NSLog("newRecipeTapped")
     }
