@@ -8,10 +8,10 @@
 
 import UIKit
 
-class NavigationViewController: UINavigationController, RecipesViewControllerDelegate {
+class NavigationViewController: UINavigationController, RecipesListControllerDelegate, RecipesFormControllerDelegate {
 
     override func viewDidLoad() {
-        let controller = RecipesViewController(delegate: self)
+        let controller = RecipesListController(delegate: self)
         self.setViewControllers([controller], animated: false)
     }
 
@@ -23,6 +23,12 @@ class NavigationViewController: UINavigationController, RecipesViewControllerDel
     
     func newRecipeTapped() {
         NSLog("newRecipeTapped")
+    }
+    
+    // MARK: RecipesFormControllerDelegate
+    
+    func saveRecipeTapped() {
+        NSLog("saveRecipeTapped")
     }
 
 }

@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 protocol RecipesFormControllerDelegate {
-    func didTappedSave()
+    func saveRecipeTapped()
 }
 
 class RecipesFormController: UIViewController {
