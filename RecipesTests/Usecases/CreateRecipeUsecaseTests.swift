@@ -54,15 +54,15 @@ class CreateRecipeUsecaseTests: XCTestCase {
       dificultyLevel: .Easy,
       ingredients: ingredients,
       steps: steps)
-    var error: String = String()
+    var error: RecipeError?
     
     do{
       try usecase.create(recipe)
     } catch RecipeError.EmptyTitle {
-      error = RecipeError.EmptyTitle.description()
+      error = RecipeError.EmptyTitle
     } catch { }
     
     XCTAssertFalse(presenter.showed)
-    XCTAssertEqual(RecipeError.EmptyTitle.description(), error)
+    XCTAssertEqual(RecipeError.EmptyTitle, error)
   }
 }
