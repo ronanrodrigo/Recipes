@@ -172,9 +172,9 @@
 		342DCE531C67FB1000E6659E /* Recipes */ = {
 			isa = PBXGroup;
 			children = (
+				3425BCAA1C68B87500A7662F /* ApplicationBase */,
 				34988B161C69F3DF0059287C /* Gateways */,
 				34988B151C69F3D80059287C /* Presenters */,
-				3425BCAA1C68B87500A7662F /* ApplicationBase */,
 				342DCE611C6801F500E6659E /* ViewControllers */,
 			);
 			path = Recipes;
@@ -223,12 +223,12 @@
 			isa = PBXGroup;
 			children = (
 				34FB6DA11C6A27890087B86B /* Delegates */,
-				34988B0E1C692A970059287C /* Validators */,
 				34988AE41C69210B0059287C /* Enums */,
 				34988AE71C69210B0059287C /* Gateways */,
 				34988AE91C69210B0059287C /* Presenters */,
 				34988AEB1C69210B0059287C /* Structs */,
 				34988AEF1C69210B0059287C /* Usecases */,
+				34988B0E1C692A970059287C /* Validators */,
 			);
 			path = Core;
 			sourceTree = SOURCE_ROOT;
