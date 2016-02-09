@@ -8,11 +8,6 @@
 
 import UIKit
 
-// TODO: Extract delegate protocol definition
-protocol RecipesListControllerDelegate {
-  func newRecipeTapped()
-}
-
 class RecipesListController: UIViewController {
   var delegate: RecipesListControllerDelegate?
   var tableView: UITableView = UITableView()

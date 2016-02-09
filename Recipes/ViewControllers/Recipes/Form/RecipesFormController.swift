@@ -9,11 +9,6 @@
 import Foundation
 import UIKit
 
-// TODO: Extract delegate protocol definition
-protocol RecipesFormControllerDelegate {
-  func saveRecipeTapped(savedRecipe: Recipe)
-}
-
 class RecipesFormController: UIViewController {
   var delegate: RecipesFormControllerDelegate?
   var tableView: UITableView!
