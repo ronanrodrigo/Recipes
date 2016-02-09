@@ -47,6 +47,7 @@
 		34988B1E1C69FF1A0059287C /* RecipesFormDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3452F1551C68DD3B00DF68C2 /* RecipesFormDataSource.swift */; };
 		34988B1F1C69FF260059287C /* UIViewAutoLayoutExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CB819D1C68F93100BB2EC3 /* UIViewAutoLayoutExtension.swift */; };
 		34CB819E1C68F93100BB2EC3 /* UIViewAutoLayoutExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CB819D1C68F93100BB2EC3 /* UIViewAutoLayoutExtension.swift */; };
+		34EA510A1C6A0EB400E90DB4 /* RecipesListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3425BCA51C68AED800A7662F /* RecipesListDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -455,6 +456,7 @@
 				34988AFA1C6921590059287C /* MeasureUnity.swift in Sources */,
 				34988AFB1C6921590059287C /* RecipeGateway.swift in Sources */,
 				34988AFC1C6921590059287C /* ShowSavedRecipe.swift in Sources */,
+				34EA510A1C6A0EB400E90DB4 /* RecipesListDelegate.swift in Sources */,
 				34988B1C1C69F4580059287C /* ShowSavedRecipeIOS.swift in Sources */,
 				34988AFD1C6921590059287C /* Ingredient.swift in Sources */,
 				34988B0D1C69268D0059287C /* RecipeGatewayFake.swift in Sources */,
