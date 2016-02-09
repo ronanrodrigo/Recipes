@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 protocol RecipesFormControllerDelegate {
-  func saveRecipeTapped()
+  func saveRecipeTapped(savedRecipe: Recipe)
 }
 
 class RecipesFormController: UIViewController {
@@ -41,7 +41,21 @@ class RecipesFormController: UIViewController {
   }
   
   func saveRecipeTapped() {
-    self.delegate?.saveRecipeTapped()
+    let recipeStruct = RecipeStruct(
+      title: (tableViewDataSource?.recipeTitle.text)!,
+      description: tableViewDataSource?.recipeDescription.text,
+      dificultyLevel: .Hard
+    )
+    
+    let presenter = ShowSavedRecipeIOS(delegate: self.delegate!)
+    let gateway = RecipeGatewayCoreData()
+    let usecase = CreateRecipeUsecase(gateway: gateway, presenter: presenter)
+    
+    do {
+      try usecase.create(recipeStruct)
+    } catch RecipeError.EmptyTitle {
+      NSLog("%@", RecipeError.EmptyTitle.description())
+    } catch { }
   }
   
   func createTableView() {
