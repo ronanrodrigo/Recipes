@@ -195,7 +195,7 @@
 			children = (
 				34988B011C6924870059287C /* Fakes */,
 				34988AE01C691FF20059287C /* Usecases */,
-				3452F14A1C68BB3500DF68C2 /* Info.plist */,
+				347FC35F1C6A2D7500B5859D /* TestsBase */,
 			);
 			path = RecipesTests;
 			sourceTree = "<group>";
@@ -208,6 +208,15 @@
 			);
 			name = Form;
 			path = Recipes/ViewControllers/Recipes/Form;
+			sourceTree = SOURCE_ROOT;
+		};
+		347FC35F1C6A2D7500B5859D /* TestsBase */ = {
+			isa = PBXGroup;
+			children = (
+				3452F14A1C68BB3500DF68C2 /* Info.plist */,
+			);
+			name = TestsBase;
+			path = RecipesTests/TestsBase;
 			sourceTree = SOURCE_ROOT;
 		};
 		34988AE01C691FF20059287C /* Usecases */ = {
@@ -626,7 +635,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = RecipesTests/Info.plist;
+				INFOPLIST_FILE = RecipesTests/TestsBase/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.meuspedidos.RecipesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -638,7 +647,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = RecipesTests/Info.plist;
+				INFOPLIST_FILE = RecipesTests/TestsBase/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.meuspedidos.RecipesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
