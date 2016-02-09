@@ -9,10 +9,11 @@
 import UIKit
 
 class NavigationViewController: UINavigationController, RecipesListControllerDelegate, RecipesFormControllerDelegate {
+  var recipeListController: RecipesListController!
   
   override func viewDidLoad() {
-    let controller = RecipesListController(delegate: self)
-    self.setViewControllers([controller], animated: false)
+    recipeListController = RecipesListController(delegate: self)
+    self.setViewControllers([recipeListController], animated: false)
   }
   
   override func didReceiveMemoryWarning() {
@@ -28,8 +29,9 @@ class NavigationViewController: UINavigationController, RecipesListControllerDel
   
   // MARK: RecipesFormControllerDelegate
   
-  func saveRecipeTapped() {
+  func saveRecipeTapped(recipe: Recipe) {
     self.popViewControllerAnimated(true)
+    recipeListController.recipes.append(recipe)
   }
   
 }
