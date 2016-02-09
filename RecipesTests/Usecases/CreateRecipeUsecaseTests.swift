@@ -12,8 +12,6 @@ class CreateRecipeUsecaseTests: XCTestCase {
   var usecase: CreateRecipeUsecase!
   var presenter: ShowSavedRecipeFake!
   var gateway: RecipeGatewayFake!
-  var ingredients: [Ingredient]!
-  var steps: [Step]!
   var recipe: Recipe!
   
   override func setUp() {
@@ -22,23 +20,10 @@ class CreateRecipeUsecaseTests: XCTestCase {
     presenter = ShowSavedRecipeFake()
     gateway = RecipeGatewayFake()
     usecase = CreateRecipeUsecase(gateway: gateway, presenter: presenter)
-    
-    ingredients = [
-      IngredientStruct(title: "Oil", quantity: 0.5, measureUnity: .CupOfTea),
-      IngredientStruct(title: "Carrot", quantity: 3, measureUnity: .UN)
-    ]
-    
-    steps = [
-      StepStruct(sequence: 1, description: "In blender, mix the carrot with eggs and oil"),
-      StepStruct(sequence: 2, description: "Add the sugar and mix for more 5 minutes")
-    ]
-    
     recipe = RecipeStruct(
       title: "Carrot cake",
       description: "Simple and wonderful cake",
-      dificultyLevel: .Easy,
-      ingredients: ingredients,
-      steps: steps)
+      dificultyLevel: .Easy)
   }
   
   func testShouldCreateRecipeWithAllInfos() {
@@ -51,9 +36,8 @@ class CreateRecipeUsecaseTests: XCTestCase {
     recipe = RecipeStruct(
       title: "",
       description: "Simple and wonderful cake",
-      dificultyLevel: .Easy,
-      ingredients: ingredients,
-      steps: steps)
+      dificultyLevel: .Easy
+    )
     var error: RecipeError?
     
     do{
