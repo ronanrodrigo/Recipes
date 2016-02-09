@@ -6,8 +6,6 @@
 //  Copyright © 2016 Ronan Rodrigo Nunes. All rights reserved.
 //
 
-protocol ShowSavedRecipe {
-  var delegate: RecipesFormControllerDelegate { get }
-  
+protocol ShowSavedRecipe {  
   func show(recipe: Recipe)
 }
