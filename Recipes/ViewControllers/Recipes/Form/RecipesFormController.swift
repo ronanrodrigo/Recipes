@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+// TODO: Extract delegate protocol definition
 protocol RecipesFormControllerDelegate {
   func saveRecipeTapped(savedRecipe: Recipe)
 }

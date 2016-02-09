@@ -8,6 +8,7 @@
 
 import UIKit
 
+// TODO: Extract delegate protocol definition
 protocol RecipesListControllerDelegate {
   func newRecipeTapped()
 }
