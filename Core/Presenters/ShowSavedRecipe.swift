@@ -7,5 +7,7 @@
 //
 
 protocol ShowSavedRecipe {
+  var delegate: RecipesFormControllerDelegate { get }
+  
   func show(recipe: Recipe)
 }
