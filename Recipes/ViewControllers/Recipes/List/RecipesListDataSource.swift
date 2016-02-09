@@ -10,10 +10,10 @@ import Foundation
 import UIKit
 
 class RecipesListDataSource: NSObject, UITableViewDataSource {
-  var recipes: [String]
+  var recipes: [Recipe]
   var cellIdentifier: String
   
-  init(recipes: [String], cellIdentifier: String) {
+  init(recipes: [Recipe], cellIdentifier: String) {
     self.recipes = recipes
     self.cellIdentifier = cellIdentifier
   }
@@ -24,7 +24,7 @@ class RecipesListDataSource: NSObject, UITableViewDataSource {
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as UITableViewCell
-    cell.textLabel?.text = recipes[indexPath.row]
+    cell.textLabel?.text = recipes[indexPath.row].title
     return cell
   }
 }

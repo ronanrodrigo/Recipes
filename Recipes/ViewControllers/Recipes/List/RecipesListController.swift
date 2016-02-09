@@ -17,6 +17,7 @@ class RecipesListController: UIViewController {
   var tableView: UITableView = UITableView()
   var tableViewDataSource: RecipesListDataSource?
   var tableViewDelegate: RecipesListDelegate?
+  var recipes: [Recipe] = []
   
   init(delegate: RecipesListControllerDelegate) {
     self.delegate = delegate
@@ -34,6 +35,11 @@ class RecipesListController: UIViewController {
     createTableView()
   }
   
+  override func viewDidAppear(animated: Bool) {
+    tableViewDataSource?.recipes = recipes
+    tableView.reloadData()
+  }
+  
   func configureNavigation() {
     navigationItem.title = "Recipes"
     let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "newRecipe")
@@ -47,7 +53,7 @@ class RecipesListController: UIViewController {
   }
   
   func createTableView() {
-    tableViewDataSource = RecipesListDataSource(recipes: ["Carrot cake", "Chocolate cake"], cellIdentifier: "RecipeCell")
+    tableViewDataSource = RecipesListDataSource(recipes: recipes, cellIdentifier: "RecipeCell")
     tableView.dataSource = tableViewDataSource
     
     tableViewDelegate = RecipesListDelegate()
