@@ -10,14 +10,10 @@ protocol Recipe {
   var title: String { get }
   var description: String? { get }
   var dificultyLevel: DificultyLevel { get }
-  var ingredients: [Ingredient] { get }
-  var steps: [Step] { get }
 }
 
 struct RecipeStruct: Recipe {
   var title: String
   var description: String?
   var dificultyLevel: DificultyLevel
-  var ingredients: [Ingredient]
-  var steps: [Step]
 }
