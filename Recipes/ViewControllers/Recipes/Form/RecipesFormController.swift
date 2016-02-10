@@ -29,7 +29,6 @@ class RecipesFormController: UIViewController {
     configureNavigation()
   }
   
-  
   func configureNavigation() {
     navigationItem.title = "New recipe"
     let addButton = UIBarButtonItem(barButtonSystemItem: .Save, target: self, action: "saveRecipeTapped")
