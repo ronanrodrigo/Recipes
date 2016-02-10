@@ -167,5 +167,5 @@ import Foundation
 //
 
 let date = Double(NSDate().timeIntervalSince1970)
-print(date)
+print(String(date))
 

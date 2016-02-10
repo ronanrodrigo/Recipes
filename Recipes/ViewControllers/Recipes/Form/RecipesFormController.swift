@@ -45,7 +45,7 @@ class RecipesFormController: UIViewController {
     )
     
     let presenter = ShowSavedRecipeIOS(delegate: self.delegate!)
-    let gateway = RecipeGatewayCoreData()
+    let gateway = RecipeGatewayRealm()
     let usecase = CreateRecipeUsecase(gateway: gateway, presenter: presenter)
     
     do {

@@ -1,5 +1,5 @@
 //
-//  RecipeGatewayCoreData.swift
+//  RecipeGatewayRealm.swift
 //  Recipes
 //
 //  Created by Ronan Rodrigo Nunes on 2/9/16.
@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-class RecipeGatewayCoreData: RecipeGateway {
+class RecipeGatewayRealm: RecipeGateway {
   func create(recipe: Recipe) -> Recipe {
     let recipeModel = RecipeModel()
     recipeModel.title = recipe.title
