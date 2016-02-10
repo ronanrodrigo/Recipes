@@ -46,7 +46,6 @@
 		34988B1D1C69FF070059287C /* RecipesFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3452F1511C68CAEC00DF68C2 /* RecipesFormController.swift */; };
 		34988B1E1C69FF1A0059287C /* RecipesFormDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3452F1551C68DD3B00DF68C2 /* RecipesFormDataSource.swift */; };
 		34988B1F1C69FF260059287C /* UIViewAutoLayoutExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CB819D1C68F93100BB2EC3 /* UIViewAutoLayoutExtension.swift */; };
-		34B178F11C6ABCF400A3D2B4 /* Recipe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 34B178EF1C6ABCF400A3D2B4 /* Recipe.xcdatamodeld */; };
 		34CB819E1C68F93100BB2EC3 /* UIViewAutoLayoutExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CB819D1C68F93100BB2EC3 /* UIViewAutoLayoutExtension.swift */; };
 		34EA510A1C6A0EB400E90DB4 /* RecipesListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3425BCA51C68AED800A7662F /* RecipesListDelegate.swift */; };
 		34FB6DA31C6A27A10087B86B /* RecipesFormControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FB6DA21C6A27A10087B86B /* RecipesFormControllerDelegate.swift */; };
@@ -94,7 +93,6 @@
 		34988B121C692B900059287C /* RecipeError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeError.swift; sourceTree = "<group>"; };
 		34988B171C69F41D0059287C /* RecipeGatewayCoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeGatewayCoreData.swift; sourceTree = "<group>"; };
 		34988B1A1C69F4580059287C /* ShowSavedRecipeIOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowSavedRecipeIOS.swift; sourceTree = "<group>"; };
-		34B178F01C6ABCF400A3D2B4 /* Recipe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Recipe.xcdatamodel; sourceTree = "<group>"; };
 		34CB819D1C68F93100BB2EC3 /* UIViewAutoLayoutExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewAutoLayoutExtension.swift; sourceTree = "<group>"; };
 		34FB6DA21C6A27A10087B86B /* RecipesFormControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesFormControllerDelegate.swift; sourceTree = "<group>"; };
 		34FB6DA51C6A27BA0087B86B /* RecipesListControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesListControllerDelegate.swift; sourceTree = "<group>"; };
@@ -147,7 +145,6 @@
 				342DCE581C67FB1000E6659E /* LaunchScreen.storyboard */,
 				342DCE5B1C67FB1000E6659E /* Info.plist */,
 				34CB819D1C68F93100BB2EC3 /* UIViewAutoLayoutExtension.swift */,
-				34B178EF1C6ABCF400A3D2B4 /* Recipe.xcdatamodeld */,
 			);
 			name = ApplicationBase;
 			path = Recipes/ApplicationBase;
@@ -175,6 +172,7 @@
 		342DCE531C67FB1000E6659E /* Recipes */ = {
 			isa = PBXGroup;
 			children = (
+				346814B71C6ABEDA0037FAF9 /* Models */,
 				3425BCAA1C68B87500A7662F /* ApplicationBase */,
 				34988B161C69F3DF0059287C /* Gateways */,
 				34988B151C69F3D80059287C /* Presenters */,
@@ -211,6 +209,14 @@
 			);
 			name = Form;
 			path = Recipes/ViewControllers/Recipes/Form;
+			sourceTree = SOURCE_ROOT;
+		};
+		346814B71C6ABEDA0037FAF9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			path = Recipes/Models;
 			sourceTree = SOURCE_ROOT;
 		};
 		347FC35F1C6A2D7500B5859D /* TestsBase */ = {
@@ -473,7 +479,6 @@
 				34988B101C692AB20059287C /* RecipeValidator.swift in Sources */,
 				342DCE6B1C680C9500E6659E /* RecipesListController.swift in Sources */,
 				342DCE551C67FB1000E6659E /* AppDelegate.swift in Sources */,
-				34B178F11C6ABCF400A3D2B4 /* Recipe.xcdatamodeld in Sources */,
 				34988B131C692B900059287C /* RecipeError.swift in Sources */,
 				34FB6DA61C6A27BA0087B86B /* RecipesListControllerDelegate.swift in Sources */,
 				3452F1521C68CAEC00DF68C2 /* RecipesFormController.swift in Sources */,
@@ -690,19 +695,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		34B178EF1C6ABCF400A3D2B4 /* Recipe.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				34B178F01C6ABCF400A3D2B4 /* Recipe.xcdatamodel */,
-			);
-			currentVersion = 34B178F01C6ABCF400A3D2B4 /* Recipe.xcdatamodel */;
-			path = Recipe.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 342DCE491C67FB1000E6659E /* Project object */;
 }
