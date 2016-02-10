@@ -7,12 +7,13 @@
 //
 
 protocol Recipe {
-  var title: String { get }
-  var brief: String? { get }
-  var dificultyLevel: DificultyLevel { get }
+  var title: String { get set }
+  var brief: String? { get set }
+  var dificultyLevel: DificultyLevel { get set }
 }
 
 struct RecipeStruct: Recipe {
+  var id: Int?
   var title: String
   var brief: String?
   var dificultyLevel: DificultyLevel

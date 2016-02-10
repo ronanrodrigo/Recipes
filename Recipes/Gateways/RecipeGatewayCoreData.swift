@@ -7,9 +7,30 @@
 //
 
 import Foundation
+import RealmSwift
 
 class RecipeGatewayCoreData: RecipeGateway {
   func create(recipe: Recipe) -> Recipe {
-    return recipe
+    let recipeModel = RecipeModel()
+    recipeModel.title = recipe.title
+    recipeModel.brief = recipe.brief
+    recipeModel.dificultyLevel = recipe.dificultyLevel
+    recipeModel.id = Int(NSDate().timeIntervalSince1970)
+    
+    let realm = try! Realm()
+    try! realm.write {
+      realm.add(recipeModel)
+    }
+    
+    return generateStruct(recipeModel)
+  }
+  
+  func generateStruct(recipe: RecipeModel) -> RecipeStruct {
+    return RecipeStruct(
+      id: recipe.id,
+      title: recipe.title,
+      brief: recipe.brief,
+      dificultyLevel: recipe.dificultyLevel
+    )
   }
 }
