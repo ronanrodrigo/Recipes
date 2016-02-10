@@ -1,8 +1,8 @@
 import UIKit
 import Foundation
-
 import XCPlayground
 
+// MARK: Enums
 
 enum MeasureUnity: String {
   case KG, G, MG, UN, CupOfTea, Teaspoon, SoupSpoon
@@ -27,6 +27,9 @@ enum DificultyLevel {
   case Hard, Medium, Easy
 }
 
+
+// MARK: Structs
+
 struct Ingredient {
   var title: String
   var quantity: Double
@@ -38,21 +41,16 @@ struct Step {
   var description: String
 }
 
-class Recipe {
+struct Recipe {
   var title: String
   var description: String?
   var dificultyLevel: DificultyLevel
   var ingredients: [Ingredient]
   var steps: [Step]
-  
-  init(title: String, description: String?, dificultyLevel: DificultyLevel, ingredients: [Ingredient], steps: [Step]) {
-    self.title = title
-    self.description = description
-    self.dificultyLevel = dificultyLevel
-    self.ingredients = ingredients
-    self.steps = steps
-  }
 }
+
+
+// MARK: Gateway
 
 protocol RecipeGateway {
   func createRecipe(recipe: Recipe) -> Recipe
@@ -71,6 +69,9 @@ class RecipeGatewayFake: RecipeGateway {
   }
 }
 
+
+// MARK: Presenter
+
 protocol RecipePesenter {
   func displayRecipe(recipe: Recipe)
 }
@@ -79,32 +80,25 @@ class RecipePresenterPlayground: RecipePesenter {
   var recipeView: CGRect
   var labelSize: CGRect
   var main: UIView
+  let margin: CGFloat = 20.0
   
   init() {
     recipeView = CGRect(x: 0, y: 0, width: 500, height: 1000)
     main = UIView(frame: recipeView)
     main.backgroundColor = UIColor(hue:0, saturation:0, brightness:0.97, alpha:1)
     XCPlaygroundPage.currentPage.liveView = main
-    labelSize = CGRect(x: 10, y: 10, width: recipeView.width-20, height: 30)
+    labelSize = CGRect(x: 10, y: -margin, width: recipeView.width-margin, height: 30)
   }
   
   func displayRecipe(recipe: Recipe) {
-    let recipeTitle: UILabel = UILabel(frame: labelSize)
-    recipeTitle.text = recipe.title
-    recipeTitle.font = UIFont(name: "Helvetica-Bold", size: 20)
-    main.addSubview(recipeTitle)
-    
-    labelSize.origin.y += 20
-    let recipeDescription: UILabel = UILabel(frame: labelSize)
-    recipeDescription.text = recipe.description
-    main.addSubview(recipeDescription)
-    
+    createLabel(recipe.title).font = UIFont(name: "Helvetica-Bold", size: 20)
+    createLabel(recipe.description!)
     addIngredients(recipe.ingredients)
     addSteps(recipe.steps)
   }
   
   func addIngredients(ingredients: [Ingredient]) {
-    labelSize.origin.y += 20
+    labelSize.origin.y += margin
     for ingredient in ingredients {
       let ingredientText = [String(ingredient.quantity), ingredient.measureUnity.description(), "of", ingredient.title].joinWithSeparator(" ")
       createLabel(ingredientText)
@@ -112,20 +106,24 @@ class RecipePresenterPlayground: RecipePesenter {
   }
   
   func addSteps(steps: [Step]) {
-    labelSize.origin.y += 20
+    labelSize.origin.y += margin
     for step in steps {
       let stepText = [String(step.sequence), step.description].joinWithSeparator(". ")
       createLabel(stepText)
     }
   }
   
-  func createLabel(text: String) {
-    labelSize.origin.y += 20
+  func createLabel(text: String) -> UILabel{
+    labelSize.origin.y += margin
     let label: UILabel = UILabel(frame: labelSize)
     label.text = text
     main.addSubview(label)
+    return label
   }
 }
+
+
+// MARK: Usecase
 
 class CreateRecipeUsecase {
   var gateway: RecipeGateway
@@ -142,13 +140,16 @@ class CreateRecipeUsecase {
   }
 }
 
+
+// MARK: Runing
+
 let ingredients = [
   Ingredient(title: "Oil", quantity: 0.5, measureUnity: .CupOfTea),
   Ingredient(title: "Carrot", quantity: 3, measureUnity: .UN),
   Ingredient(title: "Eggs", quantity: 4, measureUnity: .UN),
   Ingredient(title: "Sugar", quantity: 2, measureUnity: .CupOfTea),
   Ingredient(title: "Wheat flour", quantity: 2.5, measureUnity: .CupOfTea),
-  Ingredient(title: "Yeast", quantity: 1, measureUnity: .CupOfTea),
+  Ingredient(title: "Yeast", quantity: 1, measureUnity: .CupOfTea)
 ]
 
 let steps = [
@@ -158,7 +159,17 @@ let steps = [
   Step(sequence: 4, description: "Put in the oven")
 ]
 
+let recipe = Recipe(
+  title: "Carrot cake",
+  description: "Simple and wonderful cake",
+  dificultyLevel: .Easy,
+  ingredients: ingredients,
+  steps: steps
+)
 
-let recipe = Recipe(title: "Carrot cake", description: "Simple and wonderful cake",  dificultyLevel: DificultyLevel.Easy, ingredients: ingredients, steps: steps)
-CreateRecipeUsecase(gateway: RecipeGatewayFake(), presenter: RecipePresenterPlayground()).create(recipe)
+let createRecipeUsecase = CreateRecipeUsecase(
+  gateway: RecipeGatewayFake(),
+  presenter: RecipePresenterPlayground()
+)
+createRecipeUsecase.create(recipe)
 
