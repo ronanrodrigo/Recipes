@@ -81,9 +81,9 @@ class RecipePresenterPlayground: RecipePesenter {
   var main: UIView
   
   init() {
-    recipeView = CGRect(x: 0, y: 0, width: 500, height: 700)
+    recipeView = CGRect(x: 0, y: 0, width: 500, height: 1000)
     main = UIView(frame: recipeView)
-    main.backgroundColor = UIColor(red:0.25, green:0.25, blue:0.29, alpha:1.0)
+    main.backgroundColor = UIColor(hue:0, saturation:0, brightness:0.97, alpha:1)
     XCPlaygroundPage.currentPage.liveView = main
     labelSize = CGRect(x: 10, y: 10, width: recipeView.width-20, height: 30)
   }
@@ -92,13 +92,11 @@ class RecipePresenterPlayground: RecipePesenter {
     let recipeTitle: UILabel = UILabel(frame: labelSize)
     recipeTitle.text = recipe.title
     recipeTitle.font = UIFont(name: "Helvetica-Bold", size: 20)
-    recipeTitle.textColor = UIColor.whiteColor()
     main.addSubview(recipeTitle)
     
     labelSize.origin.y += 20
     let recipeDescription: UILabel = UILabel(frame: labelSize)
     recipeDescription.text = recipe.description
-    recipeDescription.textColor = UIColor.whiteColor()
     main.addSubview(recipeDescription)
     
     addIngredients(recipe.ingredients)
@@ -108,25 +106,24 @@ class RecipePresenterPlayground: RecipePesenter {
   func addIngredients(ingredients: [Ingredient]) {
     labelSize.origin.y += 20
     for ingredient in ingredients {
-      labelSize.origin.y += 20
-      let ingredientDetail: UILabel = UILabel(frame: labelSize)
-      let ingredientData = [String(ingredient.quantity), ingredient.measureUnity.description(), "of", ingredient.title]
-      ingredientDetail.text = ingredientData.joinWithSeparator(" ")
-      ingredientDetail.textColor = UIColor.whiteColor()
-      main.addSubview(ingredientDetail)
+      let ingredientText = [String(ingredient.quantity), ingredient.measureUnity.description(), "of", ingredient.title].joinWithSeparator(" ")
+      createLabel(ingredientText)
     }
   }
   
   func addSteps(steps: [Step]) {
     labelSize.origin.y += 20
     for step in steps {
-      labelSize.origin.y += 20
-      let stepDetail: UILabel = UILabel(frame: labelSize)
-      let stepData = [String(step.sequence), step.description]
-      stepDetail.text = stepData.joinWithSeparator(". ")
-      stepDetail.textColor = UIColor.whiteColor()
-      main.addSubview(stepDetail)
+      let stepText = [String(step.sequence), step.description].joinWithSeparator(". ")
+      createLabel(stepText)
     }
+  }
+  
+  func createLabel(text: String) {
+    labelSize.origin.y += 20
+    let label: UILabel = UILabel(frame: labelSize)
+    label.text = text
+    main.addSubview(label)
   }
 }
 
