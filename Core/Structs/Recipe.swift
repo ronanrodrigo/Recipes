@@ -8,12 +8,12 @@
 
 protocol Recipe {
   var title: String { get }
-  var description: String? { get }
+  var brief: String? { get }
   var dificultyLevel: DificultyLevel { get }
 }
 
 struct RecipeStruct: Recipe {
   var title: String
-  var description: String?
+  var brief: String?
   var dificultyLevel: DificultyLevel
 }

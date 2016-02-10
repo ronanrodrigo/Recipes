@@ -39,7 +39,7 @@ class RecipesFormController: UIViewController {
   func saveRecipeTapped() {
     let recipeStruct = RecipeStruct(
       title: (tableViewDataSource?.recipeTitle.text)!,
-      description: tableViewDataSource?.recipeDescription.text,
+      brief: tableViewDataSource?.recipeDescription.text,
       dificultyLevel: .Hard
     )
     

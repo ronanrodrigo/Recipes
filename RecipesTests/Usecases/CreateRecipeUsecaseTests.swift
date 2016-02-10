@@ -22,7 +22,7 @@ class CreateRecipeUsecaseTests: XCTestCase {
     usecase = CreateRecipeUsecase(gateway: gateway, presenter: presenter)
     recipe = RecipeStruct(
       title: "Carrot cake",
-      description: "Simple and wonderful cake",
+      brief: "Simple and wonderful cake",
       dificultyLevel: .Easy)
   }
   
@@ -35,7 +35,7 @@ class CreateRecipeUsecaseTests: XCTestCase {
   func testShouldNotCreateRecipeWithoutTitle() {
     recipe = RecipeStruct(
       title: "",
-      description: "Simple and wonderful cake",
+      brief: "Simple and wonderful cake",
       dificultyLevel: .Easy
     )
     var error: RecipeError?
