@@ -1,7 +1,7 @@
-workspace 'Recipe'
+workspace 'Recipes'
 platform :ios, '9.0'
 use_frameworks!
 
-target 'Recipe' do
+target 'Recipes' do
     pod 'RealmSwift'
 end
