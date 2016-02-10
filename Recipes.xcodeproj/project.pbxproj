@@ -17,6 +17,7 @@
 		34312B7D1C6AE0CA002EFD95 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34312B7C1C6AE0CA002EFD95 /* RecipeModel.swift */; };
 		3452F1521C68CAEC00DF68C2 /* RecipesFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3452F1511C68CAEC00DF68C2 /* RecipesFormController.swift */; };
 		3452F1561C68DD3B00DF68C2 /* RecipesFormDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3452F1551C68DD3B00DF68C2 /* RecipesFormDataSource.swift */; };
+		346072A41C6BF28800A67172 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34312B7C1C6AE0CA002EFD95 /* RecipeModel.swift */; };
 		34988AE21C6920130059287C /* CreateRecipeUsecaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34988AE11C6920130059287C /* CreateRecipeUsecaseTests.swift */; };
 		34988AF11C69212C0059287C /* DificultyLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34988AE51C69210B0059287C /* DificultyLevel.swift */; };
 		34988AF21C69212C0059287C /* MeasureUnity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34988AE61C69210B0059287C /* MeasureUnity.swift */; };
@@ -569,6 +570,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34988AF91C6921590059287C /* DificultyLevel.swift in Sources */,
+				346072A41C6BF28800A67172 /* RecipeModel.swift in Sources */,
 				34988AFA1C6921590059287C /* MeasureUnity.swift in Sources */,
 				34988AFB1C6921590059287C /* RecipeGateway.swift in Sources */,
 				34988AFC1C6921590059287C /* ShowSavedRecipe.swift in Sources */,

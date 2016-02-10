@@ -21,6 +21,7 @@ class CreateRecipeUsecaseTests: XCTestCase {
     gateway = RecipeGatewayFake()
     usecase = CreateRecipeUsecase(gateway: gateway, presenter: presenter)
     recipe = RecipeStruct(
+      id: nil,
       title: "Carrot cake",
       brief: "Simple and wonderful cake",
       dificultyLevel: .Easy)
@@ -34,6 +35,7 @@ class CreateRecipeUsecaseTests: XCTestCase {
   
   func testShouldNotCreateRecipeWithoutTitle() {
     recipe = RecipeStruct(
+      id: nil,
       title: "",
       brief: "Simple and wonderful cake",
       dificultyLevel: .Easy
