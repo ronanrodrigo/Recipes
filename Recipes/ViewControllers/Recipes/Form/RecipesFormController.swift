@@ -52,7 +52,9 @@ class RecipesFormController: UIViewController {
       try usecase.create(recipeStruct)
     } catch RecipeError.EmptyTitle {
       NSLog("%@", RecipeError.EmptyTitle.description())
-    } catch { }
+    } catch {
+      NSLog("Deu treta")
+    }
   }
   
   func createTableView() {

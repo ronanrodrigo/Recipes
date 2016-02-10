@@ -44,7 +44,9 @@ class CreateRecipeUsecaseTests: XCTestCase {
       try usecase.create(recipe)
     } catch RecipeError.EmptyTitle {
       error = RecipeError.EmptyTitle
-    } catch { }
+    } catch {
+      NSLog("Deu treta")
+    }
     
     XCTAssertFalse(presenter.showed)
     XCTAssertEqual(RecipeError.EmptyTitle, error)
