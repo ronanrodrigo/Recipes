@@ -8,4 +8,5 @@
 
 protocol RecipeGateway {
   func create(recipe: Recipe) -> Recipe
+  func list() -> [Recipe]
 }

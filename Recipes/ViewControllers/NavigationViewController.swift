@@ -31,7 +31,6 @@ class NavigationViewController: UINavigationController, RecipesListControllerDel
   
   func saveRecipeTapped(recipe: Recipe) {
     self.popViewControllerAnimated(true)
-    recipeListController.recipes.append(recipe)
   }
   
 }

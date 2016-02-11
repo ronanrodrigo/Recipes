@@ -10,10 +10,10 @@ import UIKit
 
 class RecipesListController: UIViewController {
   var delegate: RecipesListControllerDelegate?
-  var tableView: UITableView = UITableView()
-  var tableViewDataSource: RecipesListDataSource?
-  var tableViewDelegate: RecipesListDelegate?
-  var recipes: [Recipe] = []
+  var presenter: ListRecipes!
+  var gateway: RecipeGateway!
+  var usecase: ListRecipesUsecase!
+  var tableView: UITableView!
   
   init(delegate: RecipesListControllerDelegate) {
     self.delegate = delegate
@@ -21,19 +21,20 @@ class RecipesListController: UIViewController {
   }
   
   required init?(coder aDecoder: NSCoder) {
-    self.delegate = nil
     super.init(coder: aDecoder)
   }
   
   override func viewDidLoad() {
-    super.viewDidLoad()
+    tableView = UITableView(frame: self.view.frame)
+    gateway = RecipeGatewayRealm()
+    presenter = ListRecipesIOS(view: view, tableView: tableView)
+    usecase = ListRecipesUsecase(gateway: gateway, presenter: presenter)
     configureNavigation()
-    createTableView()
+    super.viewDidLoad()
   }
   
-  override func viewDidAppear(animated: Bool) {
-    tableViewDataSource?.recipes = recipes
-    tableView.reloadData()
+  override func viewWillAppear(animated: Bool) {
+    usecase.list()
   }
   
   func configureNavigation() {
@@ -47,17 +48,4 @@ class RecipesListController: UIViewController {
       delegate.newRecipeTapped()
     }
   }
-  
-  func createTableView() {
-    tableViewDataSource = RecipesListDataSource(recipes: recipes, cellIdentifier: "RecipeCell")
-    tableView.dataSource = tableViewDataSource
-    
-    tableViewDelegate = RecipesListDelegate()
-    tableView.delegate = tableViewDelegate
-    
-    tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "RecipeCell")
-    tableView.frame = view.frame
-    view.addSubview(self.tableView)
-  }
-  
 }
