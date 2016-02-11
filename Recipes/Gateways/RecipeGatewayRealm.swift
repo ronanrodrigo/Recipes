@@ -25,6 +25,14 @@ class RecipeGatewayRealm: RecipeGateway {
     return generateStruct(recipeModel)
   }
   
+  func list() -> [Recipe] {
+    let realm = try! Realm()
+    return realm.objects(RecipeModel).map({return generateStruct($0)})
+    //    realm.objects(RecipeModel).map({(recipeModel: RecipeModel) -> RecipeStruct in
+    //      return generateStruct(recipeModel)
+    //    })
+  }
+  
   func generateStruct(recipe: RecipeModel) -> RecipeStruct {
     return RecipeStruct(
       id: recipe.id,
@@ -33,4 +41,5 @@ class RecipeGatewayRealm: RecipeGateway {
       dificultyLevel: recipe.dificultyLevel
     )
   }
+  
 }

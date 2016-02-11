@@ -17,4 +17,8 @@ class RecipeGatewayFake: RecipeGateway {
     recipes.append(recipe)
     return recipe
   }
+  
+  func list() -> [Recipe] {
+    return recipes
+  }
 }
