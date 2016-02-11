@@ -10,14 +10,14 @@ import XCTest
 
 class CreateRecipeUsecaseTests: XCTestCase {
   var usecase: CreateRecipeUsecase!
-  var presenter: ShowSavedRecipeFake!
+  var presenter: ShowSavedRecipeSpy!
   var gateway: RecipeGatewayFake!
   var recipe: Recipe!
   
   override func setUp() {
     super.setUp()
     
-    presenter = ShowSavedRecipeFake()
+    presenter = ShowSavedRecipeSpy()
     gateway = RecipeGatewayFake()
     usecase = CreateRecipeUsecase(gateway: gateway, presenter: presenter)
     recipe = RecipeStruct(
@@ -30,7 +30,7 @@ class CreateRecipeUsecaseTests: XCTestCase {
   func testShouldCreateRecipeWithAllInfos() {
     try! self.usecase.create(self.recipe)
     
-    XCTAssertTrue(presenter.showed)
+    XCTAssertTrue(presenter.showedSpy)
   }
   
   func testShouldNotCreateRecipeWithoutTitle() {
@@ -50,7 +50,7 @@ class CreateRecipeUsecaseTests: XCTestCase {
       NSLog("Deu treta")
     }
     
-    XCTAssertFalse(presenter.showed)
+    XCTAssertFalse(presenter.showedSpy)
     XCTAssertEqual(RecipeError.EmptyTitle, error)
   }
 }

@@ -6,10 +6,10 @@
 //  Copyright © 2016 Ronan Rodrigo Nunes. All rights reserved.
 //
 
-class ShowSavedRecipeFake: ShowSavedRecipe {
-  var showed: Bool = false
+class ShowSavedRecipeSpy: ShowSavedRecipe {
+  var showedSpy: Bool = false
   
   func show(recipe: Recipe) {
-    self.showed = true
+    self.showedSpy = true
   }
 }
