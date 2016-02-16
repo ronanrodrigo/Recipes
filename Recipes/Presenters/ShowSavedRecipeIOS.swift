@@ -16,6 +16,6 @@ class ShowSavedRecipeIOS: ShowSavedRecipe {
   }
   
   func show(recipe: Recipe) {
-    self.delegate.saveRecipeTapped(recipe)
+    self.delegate.didTappedAtSaveRecipe(recipe)
   }
 }

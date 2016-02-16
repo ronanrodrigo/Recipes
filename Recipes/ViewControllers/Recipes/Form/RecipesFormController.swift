@@ -31,11 +31,11 @@ class RecipesFormController: UIViewController {
   
   func configureNavigation() {
     navigationItem.title = "New recipe"
-    let addButton = UIBarButtonItem(barButtonSystemItem: .Save, target: self, action: "saveRecipeTapped")
+    let addButton = UIBarButtonItem(barButtonSystemItem: .Save, target: self, action: "didTappedAtSaveRecipe")
     navigationItem.rightBarButtonItem = addButton
   }
   
-  func saveRecipeTapped() {
+  func didTappedAtSaveRecipe() {
     let recipeStruct = RecipeStruct(
       id: nil,
       title: (tableViewDataSource?.recipeTitle.text)!,
