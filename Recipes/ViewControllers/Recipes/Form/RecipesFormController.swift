@@ -37,12 +37,21 @@ class RecipesFormController: UIViewController {
   }
   
   func configureNavigation() {
-    let addButton = UIBarButtonItem(barButtonSystemItem: .Save, target: self, action: "didTappedAtSaveRecipe")
     navigationItem.title = recipe != nil ? "Edit recipe" : "New recipe"
+    let addButton = UIBarButtonItem(barButtonSystemItem: .Save, target: self, action: "didTapAtSaveRecipe")
     navigationItem.rightBarButtonItem = addButton
   }
   
-  func didTappedAtSaveRecipe() {
+  func createTableView() {
+    self.tableView = UITableView(frame: view.frame, style: .Grouped)
+    tableViewDataSource = RecipesFormDataSource(cellIdentifier: "RecipesFormCell", recipe: recipe)
+    tableView.dataSource = tableViewDataSource
+    tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "RecipesFormCell")
+    tableView.frame = view.frame
+    view.addSubview(tableView)
+  }
+  
+  func didTapAtSaveRecipe() {
     let recipeStruct = RecipeStruct(
       id: recipe != nil ? recipe!.id : 0,
       title: (tableViewDataSource?.recipeTitle.text)!,
@@ -61,15 +70,6 @@ class RecipesFormController: UIViewController {
     } catch {
       NSLog("Deu treta")
     }
-  }
-  
-  func createTableView() {
-    self.tableView = UITableView(frame: view.frame, style: .Grouped)
-    tableViewDataSource = RecipesFormDataSource(cellIdentifier: "RecipesFormCell")
-    tableView.dataSource = tableViewDataSource
-    tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "RecipesFormCell")
-    tableView.frame = view.frame
-    view.addSubview(tableView)
   }
   
   
