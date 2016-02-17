@@ -20,6 +20,12 @@ class RecipesFormController: UIViewController {
     super.init(nibName: nil, bundle: nil)
   }
   
+  init(delegate: RecipesFormControllerDelegate, recipe: Recipe) {
+    self.delegate = delegate
+    self.recipe = recipe
+    super.init(nibName: nil, bundle: nil)
+  }
+  
   required init?(coder aDecoder: NSCoder) {
     self.delegate = nil
     super.init(coder: aDecoder)
@@ -33,6 +39,7 @@ class RecipesFormController: UIViewController {
   func configureNavigation() {
     navigationItem.title = "New recipe"
     let addButton = UIBarButtonItem(barButtonSystemItem: .Save, target: self, action: "didTappedAtSaveRecipe")
+    navigationItem.title = recipe != nil ? "Edit recipe" : "New recipe"
     navigationItem.rightBarButtonItem = addButton
   }
   
