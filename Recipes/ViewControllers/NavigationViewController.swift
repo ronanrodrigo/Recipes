@@ -20,16 +20,16 @@ class NavigationViewController: UINavigationController, RecipesListControllerDel
     super.didReceiveMemoryWarning()
   }
   
-  // MARK: RecipesViewControllerDelegate
+  // MARK: RecipesListControllerDelegate
   
-  func didTappedAtNewRecipe() {
+  func didTapAtNewRecipe() {
     let recipesFormController = RecipesFormController(delegate: self)
     self.pushViewController(recipesFormController, animated: true)
   }
   
   // MARK: RecipesFormControllerDelegate
   
-  func didTappedAtSaveRecipe(recipe: Recipe) {
+  func didTapAtSaveRecipe(recipe: Recipe) {
     self.popViewControllerAnimated(true)
   }
   

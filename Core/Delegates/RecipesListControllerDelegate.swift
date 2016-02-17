@@ -7,5 +7,5 @@
 //
 
 protocol RecipesListControllerDelegate {
-  func didTappedAtNewRecipe()
+  func didTapAtNewRecipe()
 }

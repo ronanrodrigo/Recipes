@@ -45,7 +45,7 @@ class RecipesListController: UIViewController {
   
   func newRecipe(){
     if let delegate = self.delegate {
-      delegate.didTappedAtNewRecipe()
+      delegate.didTapAtNewRecipe()
     }
   }
 }
