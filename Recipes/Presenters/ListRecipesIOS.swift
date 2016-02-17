@@ -11,19 +11,21 @@ import UIKit
 
 class ListRecipesIOS: ListRecipes {
   var view: UIView
+  var recipesListControllerDelegate: RecipesListControllerDelegate
   var tableView: UITableView!
   var tableViewDataSource: RecipesListDataSource?
   var tableViewDelegate: RecipesListDelegate?
   let cellIdentifier = "RecipeCell"
   
-  init(view: UIView, tableView: UITableView) {
+  init(view: UIView, recipesListControllerDelegate: RecipesListControllerDelegate, tableView: UITableView) {
     self.view = view
+    self.recipesListControllerDelegate = recipesListControllerDelegate
     self.tableView = tableView
   }
   
   func list(recipes: [Recipe]) {
     createTableViewDataSource(recipes)
-    creaetTableViewDelegate()
+    creaetTableViewDelegate(recipes)
     
     tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
     
@@ -35,8 +37,8 @@ class ListRecipesIOS: ListRecipes {
     tableView.dataSource = tableViewDataSource
   }
   
-  func creaetTableViewDelegate() {
-    tableViewDelegate = RecipesListDelegate()
+  func creaetTableViewDelegate(recipes: [Recipe]) {
+    tableViewDelegate = RecipesListDelegate(recipes: recipes, recipesListControllerDelegate: recipesListControllerDelegate)
     tableView.delegate = tableViewDelegate
   }
 }

@@ -27,7 +27,7 @@ class RecipesListController: UIViewController {
   override func viewDidLoad() {
     tableView = UITableView(frame: self.view.frame)
     gateway = RecipeGatewayRealm()
-    presenter = ListRecipesIOS(view: view, tableView: tableView)
+    presenter = ListRecipesIOS(view: view, recipesListControllerDelegate: delegate!, tableView: tableView)
     usecase = ListRecipesUsecase(gateway: gateway, presenter: presenter)
     configureNavigation()
     super.viewDidLoad()

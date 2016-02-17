@@ -11,15 +11,15 @@ import UIKit
 
 class RecipesListDelegate: NSObject, UITableViewDelegate {
   var recipes: [Recipe]
-  var recipesListController: RecipesListController
+  var recipesListControllerDelegate: RecipesListControllerDelegate
   
-  init(recipes: [Recipe], recipesListController: RecipesListController) {
+  init(recipes: [Recipe], recipesListControllerDelegate: RecipesListControllerDelegate) {
     self.recipes = recipes
-    self.recipesListController = recipesListController
+    self.recipesListControllerDelegate = recipesListControllerDelegate
   }
   
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    recipesListController.delegate?.didSelectRecipe(recipes[indexPath.row])
+    recipesListControllerDelegate.didSelectRecipe(recipes[indexPath.row])
   }
   
 }
