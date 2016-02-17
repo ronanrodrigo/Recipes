@@ -27,6 +27,11 @@ class NavigationViewController: UINavigationController, RecipesListControllerDel
     self.pushViewController(recipesFormController, animated: true)
   }
   
+  func didSelectRecipe(recipe: Recipe) {
+    let recipesFormController = RecipesFormController(delegate: self, recipe: recipe)
+    self.pushViewController(recipesFormController, animated: true)
+  }
+  
   // MARK: RecipesFormControllerDelegate
   
   func didTapAtSaveRecipe(recipe: Recipe) {

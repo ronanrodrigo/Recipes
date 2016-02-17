@@ -8,4 +8,5 @@
 
 protocol RecipesListControllerDelegate {
   func didTapAtNewRecipe()
+  func didSelectRecipe(recipe: Recipe)
 }
