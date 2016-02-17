@@ -10,7 +10,7 @@ import Foundation
 import RealmSwift
 
 class RecipeModel: Object, Recipe {
-  dynamic var id = 0
+  dynamic var id: Int = 0
   dynamic var title: String = ""
   dynamic var brief: String?
   dynamic var dificultyLevelRaw: Int = DificultyLevel.Easy.hashValue

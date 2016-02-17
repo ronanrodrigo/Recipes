@@ -13,6 +13,7 @@ class RecipesFormController: UIViewController {
   var delegate: RecipesFormControllerDelegate?
   var tableView: UITableView!
   var tableViewDataSource: RecipesFormDataSource?
+  var recipe: Recipe?
   
   init(delegate: RecipesFormControllerDelegate) {
     self.delegate = delegate
@@ -37,7 +38,7 @@ class RecipesFormController: UIViewController {
   
   func didTappedAtSaveRecipe() {
     let recipeStruct = RecipeStruct(
-      id: nil,
+      id: recipe != nil ? recipe!.id : 0,
       title: (tableViewDataSource?.recipeTitle.text)!,
       brief: tableViewDataSource?.recipeDescription.text,
       dificultyLevel: .Easy
