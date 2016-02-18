@@ -14,9 +14,11 @@ class RecipesFormDataSource: NSObject, UITableViewDataSource {
   var recipeFields: [UITextField]!
   var recipeTitle: UITextField!
   var recipeDescription: UITextField!
+  var recipe: Recipe?
   
-  init(cellIdentifier: String) {
+  init(cellIdentifier: String, recipe: Recipe?) {
     self.cellIdentifier = cellIdentifier
+    self.recipe = recipe
     super.init()
     createRecipeFields()
   }
@@ -49,6 +51,11 @@ class RecipesFormDataSource: NSObject, UITableViewDataSource {
     
     self.recipeDescription = UITextField()
     self.recipeDescription.placeholder = "Description"
+    
+    if let recipe = self.recipe {
+      self.recipeTitle.text = recipe.title
+      self.recipeDescription.text = recipe.brief
+    }
     
     self.recipeFields = [self.recipeTitle, self.recipeDescription]
   }
