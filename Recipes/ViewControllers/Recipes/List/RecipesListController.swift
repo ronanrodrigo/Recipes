@@ -39,11 +39,11 @@ class RecipesListController: UIViewController {
   
   func configureNavigation() {
     navigationItem.title = "Recipes"
-    let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "newRecipe")
+    let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "didTapAtNewRecipe")
     navigationItem.rightBarButtonItem = addButton
   }
   
-  func newRecipe(){
+  func didTapAtNewRecipe(){
     if let delegate = self.delegate {
       delegate.didTapAtNewRecipe()
     }
