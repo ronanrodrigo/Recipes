@@ -8,16 +8,6 @@
 
 import XCTest
 
-class UpdateRecipePresenterSpy:UpdateRecipePresenter{
-  
-  var spiedRecipe: Recipe!
-  
-  func show(recipe: Recipe) {
-    self.spiedRecipe = recipe
-  }
-  
-}
-
 class UpdateRecipesUsecaseTests: XCTestCase {
   var usecase: UpdateRecipeUsecase!
   var gateway: RecipeGatewayFake!
