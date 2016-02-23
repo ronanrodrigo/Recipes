@@ -8,9 +8,9 @@
 
 class CreateRecipeUsecase {
   var gateway: RecipeGateway
-  var presenter: ShowSavedRecipe
+  var presenter: CreateRecipePresenter
   
-  init(gateway: RecipeGateway, presenter: ShowSavedRecipe) {
+  init(gateway: RecipeGateway, presenter: CreateRecipePresenter) {
     self.gateway = gateway
     self.presenter = presenter
   }

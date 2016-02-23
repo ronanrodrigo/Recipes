@@ -1,5 +1,5 @@
 //
-//  ShowSavedRecipeIOS.swift
+//  CreateRecipePresenterIOS.swift
 //  Recipes
 //
 //  Created by Ronan Rodrigo Nunes on 2/9/16.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ShowSavedRecipeIOS: ShowSavedRecipe {
+class CreateRecipePresenterIOS: CreateRecipePresenter {
   var delegate: RecipesFormControllerDelegate
   
   init(delegate: RecipesFormControllerDelegate) {

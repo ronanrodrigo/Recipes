@@ -10,14 +10,14 @@ import XCTest
 
 class CreateRecipeUsecaseTests: XCTestCase {
   var usecase: CreateRecipeUsecase!
-  var presenter: ShowSavedRecipeSpy!
+  var presenter: CreateRecipePresenterSpy!
   var gateway: RecipeGatewayFake!
   var recipe: Recipe!
   
   override func setUp() {
     super.setUp()
     
-    presenter = ShowSavedRecipeSpy()
+    presenter = CreateRecipePresenterSpy()
     gateway = RecipeGatewayFake()
     usecase = CreateRecipeUsecase(gateway: gateway, presenter: presenter)
     recipe = RecipeStruct(

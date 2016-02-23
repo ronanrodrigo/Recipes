@@ -59,7 +59,7 @@ class RecipesFormController: UIViewController {
       dificultyLevel: .Easy
     )
     
-    let presenter = ShowSavedRecipeIOS(delegate: self.delegate!)
+    let presenter = CreateRecipePresenterIOS(delegate: self.delegate!)
     let gateway = RecipeGatewayRealm()
     let usecase = CreateRecipeUsecase(gateway: gateway, presenter: presenter)
     

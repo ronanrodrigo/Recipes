@@ -6,6 +6,6 @@
 //  Copyright © 2016 Ronan Rodrigo Nunes. All rights reserved.
 //
 
-protocol ShowSavedRecipe {  
+protocol CreateRecipePresenter {  
   func show(recipe: Recipe)
 }
