@@ -20,7 +20,7 @@
 		346072A41C6BF28800A67172 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34312B7C1C6AE0CA002EFD95 /* RecipeModel.swift */; };
 		346072B61C6BF39A00A67172 /* ListRecipesUsecaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346072B51C6BF39A00A67172 /* ListRecipesUsecaseTests.swift */; };
 		346072B81C6BF4DB00A67172 /* ListRecipesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346072B71C6BF4DB00A67172 /* ListRecipesPresenter.swift */; };
-		346072BA1C6BF4FD00A67172 /* ListRecipesSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346072B91C6BF4FD00A67172 /* ListRecipesSpy.swift */; };
+		346072BA1C6BF4FD00A67172 /* ListRecipesPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346072B91C6BF4FD00A67172 /* ListRecipesPresenterSpy.swift */; };
 		346072BB1C6BF50700A67172 /* ListRecipesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346072B71C6BF4DB00A67172 /* ListRecipesPresenter.swift */; };
 		346072BD1C6BF5D300A67172 /* ListRecipesUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346072BC1C6BF5D300A67172 /* ListRecipesUsecase.swift */; };
 		346072C01C6BF88E00A67172 /* ListRecipesIOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346072BF1C6BF88E00A67172 /* ListRecipesIOS.swift */; };
@@ -96,7 +96,7 @@
 		3452F1551C68DD3B00DF68C2 /* RecipesFormDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesFormDataSource.swift; sourceTree = "<group>"; };
 		346072B51C6BF39A00A67172 /* ListRecipesUsecaseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListRecipesUsecaseTests.swift; sourceTree = "<group>"; };
 		346072B71C6BF4DB00A67172 /* ListRecipesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListRecipesPresenter.swift; sourceTree = "<group>"; };
-		346072B91C6BF4FD00A67172 /* ListRecipesSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListRecipesSpy.swift; sourceTree = "<group>"; };
+		346072B91C6BF4FD00A67172 /* ListRecipesPresenterSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListRecipesPresenterSpy.swift; sourceTree = "<group>"; };
 		346072BC1C6BF5D300A67172 /* ListRecipesUsecase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListRecipesUsecase.swift; sourceTree = "<group>"; };
 		346072BF1C6BF88E00A67172 /* ListRecipesIOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListRecipesIOS.swift; sourceTree = "<group>"; };
 		34988AE11C6920130059287C /* CreateRecipeUsecaseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateRecipeUsecaseTests.swift; sourceTree = "<group>"; };
@@ -346,7 +346,7 @@
 			isa = PBXGroup;
 			children = (
 				34988B021C6924AA0059287C /* CreateRecipePresenterSpy.swift */,
-				346072B91C6BF4FD00A67172 /* ListRecipesSpy.swift */,
+				346072B91C6BF4FD00A67172 /* ListRecipesPresenterSpy.swift */,
 			);
 			name = Presenters;
 			path = RecipesTests/Fakes/Presenters;
@@ -607,7 +607,7 @@
 				34988AFA1C6921590059287C /* MeasureUnity.swift in Sources */,
 				349A93F01C7BCF6400EE9177 /* UpdateRecipePresenter.swift in Sources */,
 				34988AFB1C6921590059287C /* RecipeGateway.swift in Sources */,
-				346072BA1C6BF4FD00A67172 /* ListRecipesSpy.swift in Sources */,
+				346072BA1C6BF4FD00A67172 /* ListRecipesPresenterSpy.swift in Sources */,
 				34988AFC1C6921590059287C /* CreateRecipePresenter.swift in Sources */,
 				349A93ED1C7BC21600EE9177 /* UpdateRecipeUsecase.swift in Sources */,
 				34EA510A1C6A0EB400E90DB4 /* RecipesListDelegate.swift in Sources */,
