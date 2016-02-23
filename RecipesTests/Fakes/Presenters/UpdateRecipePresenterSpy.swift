@@ -7,11 +7,11 @@
 //
 
 class UpdateRecipePresenterSpy:UpdateRecipePresenter{
-  
-  var spiedRecipe: Recipe!
-  
-  func show(recipe: Recipe) {
-    self.spiedRecipe = recipe
-  }
-  
+    
+    var spiedRecipe: Recipe!
+    
+    func show(recipe: Recipe) {
+        self.spiedRecipe = recipe
+    }
+    
 }

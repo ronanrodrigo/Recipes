@@ -7,5 +7,5 @@
 //
 
 protocol ListRecipesPresenter {
-  func list(recipes: [Recipe])
+    func list(recipes: [Recipe])
 }

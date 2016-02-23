@@ -7,26 +7,26 @@
 //
 
 class RecipeGatewayFake: RecipeGateway {
-  var recipes: [Recipe]
-  
-  init() {
-    recipes = []
-  }
-  
-  func create(recipe: Recipe) -> Recipe {
-    recipes.append(recipe)
-    return recipe
-  }
-  
-  func update(recipe: Recipe) -> Recipe {
-    if let index = recipes.indexOf({ $0.id == recipe.id }) {
-      recipes[index] = recipe
+    var recipes: [Recipe]
+    
+    init() {
+        recipes = []
     }
     
-    return recipe
-  }
-  
-  func list() -> [Recipe] {
-    return recipes
-  }
+    func create(recipe: Recipe) -> Recipe {
+        recipes.append(recipe)
+        return recipe
+    }
+    
+    func update(recipe: Recipe) -> Recipe {
+        if let index = recipes.indexOf({ $0.id == recipe.id }) {
+            recipes[index] = recipe
+        }
+        
+        return recipe
+    }
+    
+    func list() -> [Recipe] {
+        return recipes
+    }
 }

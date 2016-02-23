@@ -9,29 +9,29 @@
 import XCTest
 
 class ListRecipesUsecaseTests: XCTestCase {
-  var usecase: ListRecipesUsecase!
-  var presenter: ListRecipesPresenterSpy!
-  var gateway: RecipeGatewayFake!
-  
-  override func setUp() {
-    presenter = ListRecipesPresenterSpy()
-    gateway = RecipeGatewayFake()
-    self.usecase = ListRecipesUsecase(gateway: gateway, presenter: presenter)
-  }
-  
-  func testShouldListAllRecipes() {
-    createRecipe()
+    var usecase: ListRecipesUsecase!
+    var presenter: ListRecipesPresenterSpy!
+    var gateway: RecipeGatewayFake!
     
-    self.usecase.list()
+    override func setUp() {
+        presenter = ListRecipesPresenterSpy()
+        gateway = RecipeGatewayFake()
+        self.usecase = ListRecipesUsecase(gateway: gateway, presenter: presenter)
+    }
     
-    XCTAssertEqual(self.gateway.recipes.count, self.presenter.recipesSpy.count)
-  }
-  
-  func createRecipe() {
-    gateway.create(RecipeStruct(
-      id: 0,
-      title: "Carrot cake",
-      brief: "Simple and wonderful cake",
-      dificultyLevel: .Easy))
-  }
+    func testShouldListAllRecipes() {
+        createRecipe()
+        
+        self.usecase.list()
+        
+        XCTAssertEqual(self.gateway.recipes.count, self.presenter.recipesSpy.count)
+    }
+    
+    func createRecipe() {
+        gateway.create(RecipeStruct(
+            id: 0,
+            title: "Carrot cake",
+            brief: "Simple and wonderful cake",
+            dificultyLevel: .Easy))
+    }
 }

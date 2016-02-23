@@ -7,11 +7,11 @@
 //
 
 protocol Step {
-  var sequence: Int { get }
-  var description: String { get }
+    var sequence: Int { get }
+    var description: String { get }
 }
 
 struct StepStruct: Step {
-  var sequence: Int
-  var description: String
+    var sequence: Int
+    var description: String
 }

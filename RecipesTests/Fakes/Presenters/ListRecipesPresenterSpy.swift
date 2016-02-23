@@ -7,11 +7,11 @@
 //
 
 class ListRecipesPresenterSpy: ListRecipesPresenter {
-  var recipesSpy: [Recipe] = []
-  var listedSpy: Bool = false
-  
-  func list(recipes: [Recipe]) {
-    listedSpy = true
-    recipesSpy = recipes
-  }
+    var recipesSpy: [Recipe] = []
+    var listedSpy: Bool = false
+    
+    func list(recipes: [Recipe]) {
+        listedSpy = true
+        recipesSpy = recipes
+    }
 }

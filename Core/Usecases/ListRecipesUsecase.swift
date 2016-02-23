@@ -7,15 +7,15 @@
 //
 
 class ListRecipesUsecase {
-  var gateway: RecipeGateway
-  var presenter: ListRecipesPresenter
-  
-  init(gateway: RecipeGateway, presenter: ListRecipesPresenter) {
-    self.gateway = gateway
-    self.presenter = presenter
-  }
-  
-  func list() {
-    self.presenter.list(self.gateway.list())
-  }
+    var gateway: RecipeGateway
+    var presenter: ListRecipesPresenter
+    
+    init(gateway: RecipeGateway, presenter: ListRecipesPresenter) {
+        self.gateway = gateway
+        self.presenter = presenter
+    }
+    
+    func list() {
+        self.presenter.list(self.gateway.list())
+    }
 }

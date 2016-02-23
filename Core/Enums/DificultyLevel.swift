@@ -7,5 +7,5 @@
 //
 
 enum DificultyLevel {
-  case Hard, Medium, Easy
+    case Hard, Medium, Easy
 }

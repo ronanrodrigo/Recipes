@@ -7,5 +7,5 @@
 //
 
 protocol UpdateRecipePresenter {
-  func show(recipe: Recipe)
+    func show(recipe: Recipe)
 }

@@ -9,48 +9,48 @@
 import XCTest
 
 class CreateRecipeUsecaseTests: XCTestCase {
-  var usecase: CreateRecipeUsecase!
-  var presenter: CreateRecipePresenterSpy!
-  var gateway: RecipeGatewayFake!
-  var recipe: Recipe!
-  
-  override func setUp() {
-    super.setUp()
+    var usecase: CreateRecipeUsecase!
+    var presenter: CreateRecipePresenterSpy!
+    var gateway: RecipeGatewayFake!
+    var recipe: Recipe!
     
-    presenter = CreateRecipePresenterSpy()
-    gateway = RecipeGatewayFake()
-    usecase = CreateRecipeUsecase(gateway: gateway, presenter: presenter)
-    recipe = RecipeStruct(
-      id: 0,
-      title: "Carrot cake",
-      brief: "Simple and wonderful cake",
-      dificultyLevel: .Easy)
-  }
-  
-  func testShouldCreateRecipeWithAllInfos() {
-    try! self.usecase.create(self.recipe)
-    
-    XCTAssertTrue(presenter.showedSpy)
-  }
-  
-  func testShouldNotCreateRecipeWithoutTitle() {
-    recipe = RecipeStruct(
-      id: 0,
-      title: "",
-      brief: "Simple and wonderful cake",
-      dificultyLevel: .Easy
-    )
-    var error: RecipeError?
-    
-    do{
-      try usecase.create(recipe)
-    } catch RecipeError.EmptyTitle {
-      error = RecipeError.EmptyTitle
-    } catch {
-      NSLog("Deu treta")
+    override func setUp() {
+        super.setUp()
+        
+        presenter = CreateRecipePresenterSpy()
+        gateway = RecipeGatewayFake()
+        usecase = CreateRecipeUsecase(gateway: gateway, presenter: presenter)
+        recipe = RecipeStruct(
+            id: 0,
+            title: "Carrot cake",
+            brief: "Simple and wonderful cake",
+            dificultyLevel: .Easy)
     }
     
-    XCTAssertFalse(presenter.showedSpy)
-    XCTAssertEqual(RecipeError.EmptyTitle, error)
-  }
+    func testShouldCreateRecipeWithAllInfos() {
+        try! self.usecase.create(self.recipe)
+        
+        XCTAssertTrue(presenter.showedSpy)
+    }
+    
+    func testShouldNotCreateRecipeWithoutTitle() {
+        recipe = RecipeStruct(
+            id: 0,
+            title: "",
+            brief: "Simple and wonderful cake",
+            dificultyLevel: .Easy
+        )
+        var error: RecipeError?
+        
+        do{
+            try usecase.create(recipe)
+        } catch RecipeError.EmptyTitle {
+            error = RecipeError.EmptyTitle
+        } catch {
+            NSLog("Deu treta")
+        }
+        
+        XCTAssertFalse(presenter.showedSpy)
+        XCTAssertEqual(RecipeError.EmptyTitle, error)
+    }
 }

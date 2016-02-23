@@ -9,13 +9,13 @@
 import Foundation
 
 class CreateRecipePresenterIOS: CreateRecipePresenter {
-  var delegate: RecipesFormControllerDelegate
-  
-  init(delegate: RecipesFormControllerDelegate) {
-    self.delegate = delegate
-  }
-  
-  func show(recipe: Recipe) {
-    self.delegate.didTapAtSaveRecipe(recipe)
-  }
+    var delegate: RecipesFormControllerDelegate
+    
+    init(delegate: RecipesFormControllerDelegate) {
+        self.delegate = delegate
+    }
+    
+    func show(recipe: Recipe) {
+        self.delegate.didTapAtSaveRecipe(recipe)
+    }
 }

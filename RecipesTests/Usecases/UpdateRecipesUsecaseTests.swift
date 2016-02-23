@@ -9,47 +9,47 @@
 import XCTest
 
 class UpdateRecipesUsecaseTests: XCTestCase {
-  var usecase: UpdateRecipeUsecase!
-  var gateway: RecipeGatewayFake!
-  var presenter: UpdateRecipePresenterSpy!
-  
-  override func setUp() {
-    self.gateway = RecipeGatewayFake()
-    self.presenter = UpdateRecipePresenterSpy()
-    self.usecase = UpdateRecipeUsecase(gateway: gateway, presenter: presenter)
-  }
-  
-  func testShouldUpdateAnExistRecipe() {
-    let carrotCakeTitle = "Carrot cake"
-    let brief = "Tasty"
-    let dificultyLevel = DificultyLevel.Hard
-    self.gateway.create(RecipeStruct(id: 0, title: "xxx", brief: "zzz", dificultyLevel: .Easy))
+    var usecase: UpdateRecipeUsecase!
+    var gateway: RecipeGatewayFake!
+    var presenter: UpdateRecipePresenterSpy!
     
-    self.usecase.update(RecipeStruct(
-      id: 0,
-      title: carrotCakeTitle,
-      brief: brief,
-      dificultyLevel: dificultyLevel))
+    override func setUp() {
+        self.gateway = RecipeGatewayFake()
+        self.presenter = UpdateRecipePresenterSpy()
+        self.usecase = UpdateRecipeUsecase(gateway: gateway, presenter: presenter)
+    }
     
-    let recipes = self.gateway.list()
-    XCTAssertEqual(1, recipes.count)
-    XCTAssertEqual(carrotCakeTitle, recipes.first?.title)
-    XCTAssertEqual(brief, recipes.first?.brief)
-    XCTAssertEqual(dificultyLevel, recipes.first?.dificultyLevel)
-  }
-  
-  func testShouldPresentTheUpdatedRecipe() {
-    let carrotCakeTitle = "Carrot cake"
-    let brief = "Tasty"
-    let dificultyLevel = DificultyLevel.Hard
-    self.gateway.create(RecipeStruct(id: 0, title: "xxx", brief: "zzz", dificultyLevel: .Easy))
+    func testShouldUpdateAnExistRecipe() {
+        let carrotCakeTitle = "Carrot cake"
+        let brief = "Tasty"
+        let dificultyLevel = DificultyLevel.Hard
+        self.gateway.create(RecipeStruct(id: 0, title: "xxx", brief: "zzz", dificultyLevel: .Easy))
+        
+        self.usecase.update(RecipeStruct(
+            id: 0,
+            title: carrotCakeTitle,
+            brief: brief,
+            dificultyLevel: dificultyLevel))
+        
+        let recipes = self.gateway.list()
+        XCTAssertEqual(1, recipes.count)
+        XCTAssertEqual(carrotCakeTitle, recipes.first?.title)
+        XCTAssertEqual(brief, recipes.first?.brief)
+        XCTAssertEqual(dificultyLevel, recipes.first?.dificultyLevel)
+    }
     
-    self.usecase.update(RecipeStruct(
-      id: 0,
-      title: carrotCakeTitle,
-      brief: brief,
-      dificultyLevel: dificultyLevel))
-    
-    XCTAssertEqual(carrotCakeTitle, self.presenter.spiedRecipe.title)
-  }
+    func testShouldPresentTheUpdatedRecipe() {
+        let carrotCakeTitle = "Carrot cake"
+        let brief = "Tasty"
+        let dificultyLevel = DificultyLevel.Hard
+        self.gateway.create(RecipeStruct(id: 0, title: "xxx", brief: "zzz", dificultyLevel: .Easy))
+        
+        self.usecase.update(RecipeStruct(
+            id: 0,
+            title: carrotCakeTitle,
+            brief: brief,
+            dificultyLevel: dificultyLevel))
+        
+        XCTAssertEqual(carrotCakeTitle, self.presenter.spiedRecipe.title)
+    }
 }

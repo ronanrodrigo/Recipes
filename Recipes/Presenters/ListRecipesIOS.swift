@@ -10,35 +10,35 @@ import Foundation
 import UIKit
 
 class ListRecipesPresenterIOS: ListRecipesPresenter {
-  var view: UIView
-  var recipesListControllerDelegate: RecipesListControllerDelegate
-  var tableView: UITableView!
-  var tableViewDataSource: RecipesListDataSource?
-  var tableViewDelegate: RecipesListDelegate?
-  let cellIdentifier = "RecipeCell"
-  
-  init(view: UIView, recipesListControllerDelegate: RecipesListControllerDelegate, tableView: UITableView) {
-    self.view = view
-    self.recipesListControllerDelegate = recipesListControllerDelegate
-    self.tableView = tableView
-  }
-  
-  func list(recipes: [Recipe]) {
-    createTableViewDataSource(recipes)
-    creaetTableViewDelegate(recipes)
+    var view: UIView
+    var recipesListControllerDelegate: RecipesListControllerDelegate
+    var tableView: UITableView!
+    var tableViewDataSource: RecipesListDataSource?
+    var tableViewDelegate: RecipesListDelegate?
+    let cellIdentifier = "RecipeCell"
     
-    tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+    init(view: UIView, recipesListControllerDelegate: RecipesListControllerDelegate, tableView: UITableView) {
+        self.view = view
+        self.recipesListControllerDelegate = recipesListControllerDelegate
+        self.tableView = tableView
+    }
     
-    view.addSubview(tableView)
-  }
-  
-  func createTableViewDataSource(recipes: [Recipe]) {
-    tableViewDataSource = RecipesListDataSource(recipes: recipes, cellIdentifier: cellIdentifier)
-    tableView.dataSource = tableViewDataSource
-  }
-  
-  func creaetTableViewDelegate(recipes: [Recipe]) {
-    tableViewDelegate = RecipesListDelegate(recipes: recipes, recipesListControllerDelegate: recipesListControllerDelegate)
-    tableView.delegate = tableViewDelegate
-  }
+    func list(recipes: [Recipe]) {
+        createTableViewDataSource(recipes)
+        creaetTableViewDelegate(recipes)
+        
+        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+        
+        view.addSubview(tableView)
+    }
+    
+    func createTableViewDataSource(recipes: [Recipe]) {
+        tableViewDataSource = RecipesListDataSource(recipes: recipes, cellIdentifier: cellIdentifier)
+        tableView.dataSource = tableViewDataSource
+    }
+    
+    func creaetTableViewDelegate(recipes: [Recipe]) {
+        tableViewDelegate = RecipesListDelegate(recipes: recipes, recipesListControllerDelegate: recipesListControllerDelegate)
+        tableView.delegate = tableViewDelegate
+    }
 }

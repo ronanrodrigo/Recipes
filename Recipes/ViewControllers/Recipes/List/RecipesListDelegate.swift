@@ -10,16 +10,16 @@ import Foundation
 import UIKit
 
 class RecipesListDelegate: NSObject, UITableViewDelegate {
-  var recipes: [Recipe]
-  var recipesListControllerDelegate: RecipesListControllerDelegate
-  
-  init(recipes: [Recipe], recipesListControllerDelegate: RecipesListControllerDelegate) {
-    self.recipes = recipes
-    self.recipesListControllerDelegate = recipesListControllerDelegate
-  }
-  
-  func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    recipesListControllerDelegate.didSelectRecipe(recipes[indexPath.row])
-  }
-  
+    var recipes: [Recipe]
+    var recipesListControllerDelegate: RecipesListControllerDelegate
+    
+    init(recipes: [Recipe], recipesListControllerDelegate: RecipesListControllerDelegate) {
+        self.recipes = recipes
+        self.recipesListControllerDelegate = recipesListControllerDelegate
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        recipesListControllerDelegate.didSelectRecipe(recipes[indexPath.row])
+    }
+    
 }
