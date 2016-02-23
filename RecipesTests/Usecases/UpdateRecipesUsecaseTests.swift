@@ -62,5 +62,4 @@ class UpdateRecipesUsecaseTests: XCTestCase {
     
     XCTAssertEqual(carrotCakeTitle, self.presenter.spiedRecipe.title)
   }
-
 }
