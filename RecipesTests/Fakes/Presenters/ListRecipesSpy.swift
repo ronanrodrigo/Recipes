@@ -6,7 +6,7 @@
 //  Copyright © 2016 Ronan Rodrigo Nunes. All rights reserved.
 //
 
-class ListRecipesSpy: ListRecipes {
+class ListRecipesPresenterSpy: ListRecipesPresenter {
   var recipesSpy: [Recipe] = []
   var listedSpy: Bool = false
   

@@ -10,11 +10,11 @@ import XCTest
 
 class ListRecipesUsecaseTests: XCTestCase {
   var usecase: ListRecipesUsecase!
-  var presenter: ListRecipesSpy!
+  var presenter: ListRecipesPresenterSpy!
   var gateway: RecipeGatewayFake!
   
   override func setUp() {
-    presenter = ListRecipesSpy()
+    presenter = ListRecipesPresenterSpy()
     gateway = RecipeGatewayFake()
     self.usecase = ListRecipesUsecase(gateway: gateway, presenter: presenter)
   }

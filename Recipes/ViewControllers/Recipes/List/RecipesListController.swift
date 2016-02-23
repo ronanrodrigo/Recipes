@@ -10,7 +10,7 @@ import UIKit
 
 class RecipesListController: UIViewController {
   var delegate: RecipesListControllerDelegate?
-  var presenter: ListRecipes!
+  var presenter: ListRecipesPresenter!
   var gateway: RecipeGateway!
   var usecase: ListRecipesUsecase!
   var tableView: UITableView!
@@ -27,7 +27,7 @@ class RecipesListController: UIViewController {
   override func viewDidLoad() {
     tableView = UITableView(frame: self.view.frame)
     gateway = RecipeGatewayRealm()
-    presenter = ListRecipesIOS(view: view, recipesListControllerDelegate: delegate!, tableView: tableView)
+    presenter = ListRecipesPresenterIOS(view: view, recipesListControllerDelegate: delegate!, tableView: tableView)
     usecase = ListRecipesUsecase(gateway: gateway, presenter: presenter)
     configureNavigation()
     super.viewDidLoad()

@@ -6,6 +6,6 @@
 //  Copyright © 2016 Ronan Rodrigo Nunes. All rights reserved.
 //
 
-protocol ListRecipes {
+protocol ListRecipesPresenter {
   func list(recipes: [Recipe])
 }

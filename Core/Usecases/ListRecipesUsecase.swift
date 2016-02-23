@@ -8,9 +8,9 @@
 
 class ListRecipesUsecase {
   var gateway: RecipeGateway
-  var presenter: ListRecipes
+  var presenter: ListRecipesPresenter
   
-  init(gateway: RecipeGateway, presenter: ListRecipes) {
+  init(gateway: RecipeGateway, presenter: ListRecipesPresenter) {
     self.gateway = gateway
     self.presenter = presenter
   }

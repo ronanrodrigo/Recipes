@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class ListRecipesIOS: ListRecipes {
+class ListRecipesPresenterIOS: ListRecipesPresenter {
   var view: UIView
   var recipesListControllerDelegate: RecipesListControllerDelegate
   var tableView: UITableView!
