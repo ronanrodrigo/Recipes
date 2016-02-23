@@ -29,7 +29,7 @@ class ListRecipesUsecaseTests: XCTestCase {
   
   func createRecipe() {
     gateway.create(RecipeStruct(
-      id: nil,
+      id: 0,
       title: "Carrot cake",
       brief: "Simple and wonderful cake",
       dificultyLevel: .Easy))

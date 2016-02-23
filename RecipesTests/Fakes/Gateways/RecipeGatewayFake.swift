@@ -18,6 +18,14 @@ class RecipeGatewayFake: RecipeGateway {
     return recipe
   }
   
+  func update(recipe: Recipe) -> Recipe {
+    if let index = recipes.indexOf({ $0.id == recipe.id }) {
+      recipes[index] = recipe
+    }
+    
+    return recipe
+  }
+  
   func list() -> [Recipe] {
     return recipes
   }
