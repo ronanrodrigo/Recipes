@@ -15,7 +15,7 @@ class UpdateRecipeUsecase {
         self.presenter = presenter
     }
     
-    func update(recipe: RecipeStruct){
+    func update(recipe: Recipe){
         gateway.update(recipe)
         self.presenter.show(recipe)
     }  

@@ -43,13 +43,15 @@ class UpdateRecipesUsecaseTests: XCTestCase {
         let brief = "Tasty"
         let dificultyLevel = DificultyLevel.Hard
         self.gateway.create(RecipeStruct(id: 0, title: "xxx", brief: "zzz", dificultyLevel: .Easy))
-        
-        self.usecase.update(RecipeStruct(
+        let recipeStruct: Recipe = RecipeStruct(
             id: 0,
             title: carrotCakeTitle,
             brief: brief,
-            dificultyLevel: dificultyLevel))
+            dificultyLevel: dificultyLevel)
+        
+        self.usecase.update(recipeStruct)
         
         XCTAssertEqual(carrotCakeTitle, self.presenter.spiedRecipe.title)
+        XCTAssertEqual(presenter.spiedRecipe as? RecipeStruct, recipeStruct as? RecipeStruct)
     }
 }
