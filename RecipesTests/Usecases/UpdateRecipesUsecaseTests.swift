@@ -9,6 +9,12 @@
 import XCTest
 
 class UpdateRecipesUsecaseTests: XCTestCase {
+    let recipeId = 1
+    let otherRecipeId = 2
+    let title = "Carrot cake"
+    let brief = "Tasty"
+    let dificultyLevel = DificultyLevel.Hard
+    
     var usecase: UpdateRecipeUsecase!
     var gateway: RecipeGatewayFake!
     var presenter: UpdateRecipePresenterSpy!
@@ -20,38 +26,33 @@ class UpdateRecipesUsecaseTests: XCTestCase {
     }
     
     func testShouldUpdateAnExistRecipe() {
-        let carrotCakeTitle = "Carrot cake"
-        let brief = "Tasty"
-        let dificultyLevel = DificultyLevel.Hard
-        self.gateway.create(RecipeStruct(id: 0, title: "xxx", brief: "zzz", dificultyLevel: .Easy))
+        self.gateway.create(RecipeStruct(id: recipeId, title: "xxx", brief: "zzz", dificultyLevel: .Easy))
         
         self.usecase.update(RecipeStruct(
-            id: 0,
-            title: carrotCakeTitle,
+            id: recipeId,
+            title: title,
             brief: brief,
             dificultyLevel: dificultyLevel))
         
         let recipes = self.gateway.list()
         XCTAssertEqual(1, recipes.count)
-        XCTAssertEqual(carrotCakeTitle, recipes.first?.title)
+        XCTAssertEqual(title, recipes.first?.title)
         XCTAssertEqual(brief, recipes.first?.brief)
         XCTAssertEqual(dificultyLevel, recipes.first?.dificultyLevel)
     }
     
     func testShouldPresentTheUpdatedRecipe() {
-        let carrotCakeTitle = "Carrot cake"
-        let brief = "Tasty"
-        let dificultyLevel = DificultyLevel.Hard
-        self.gateway.create(RecipeStruct(id: 0, title: "xxx", brief: "zzz", dificultyLevel: .Easy))
+        self.gateway.create(RecipeStruct(id: recipeId, title: "xxx", brief: "zzz", dificultyLevel: .Easy))
         let recipeStruct: Recipe = RecipeStruct(
-            id: 0,
-            title: carrotCakeTitle,
+            id: recipeId,
+            title: title,
             brief: brief,
             dificultyLevel: dificultyLevel)
         
         self.usecase.update(recipeStruct)
         
-        XCTAssertEqual(carrotCakeTitle, self.presenter.spiedRecipe.title)
+        XCTAssertEqual(title, self.presenter.spiedRecipe.title)
         XCTAssertEqual(presenter.spiedRecipe as? RecipeStruct, recipeStruct as? RecipeStruct)
     }
+    
 }
