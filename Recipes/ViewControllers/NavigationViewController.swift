@@ -13,11 +13,24 @@ class NavigationViewController: UINavigationController, RecipesListControllerDel
     
     override func viewDidLoad() {
         recipeListController = RecipesListController(delegate: self)
-        self.setViewControllers([recipeListController], animated: false)
+        
+        setNeedsStatusBarAppearanceUpdate()
+        customizeNavigationController()
+        setViewControllers([recipeListController], animated: false)
+    }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func customizeNavigationController() {
+        navigationBar.tintColor = UIColor.whiteColor()
+        navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
+        navigationBar.barTintColor = UIColor(red:1, green:0.76, blue:0.03, alpha:1)
     }
     
     // MARK: RecipesListControllerDelegate
