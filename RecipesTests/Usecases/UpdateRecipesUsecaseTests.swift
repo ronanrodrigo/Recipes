@@ -51,6 +51,8 @@ class UpdateRecipesUsecaseTests: XCTestCase {
         
         self.usecase.update(recipeStruct)
         
+        let recipes = self.gateway.list()
+        XCTAssertEqual(1, recipes.count)
         XCTAssertEqual(title, self.presenter.spiedRecipe.title)
         XCTAssertEqual(presenter.spiedRecipe as? RecipeStruct, recipeStruct as? RecipeStruct)
     }
