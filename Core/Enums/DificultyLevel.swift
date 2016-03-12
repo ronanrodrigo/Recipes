@@ -6,6 +6,6 @@
 //  Copyright © 2016 Ronan Rodrigo Nunes. All rights reserved.
 //
 
-enum DificultyLevel {
-    case Hard, Medium, Easy
+enum DificultyLevel: Int {
+    case Easy = 0, Medium, Hard
 }

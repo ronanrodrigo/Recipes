@@ -61,6 +61,9 @@
 		349A93EF1C7BCED700EE9177 /* UpdateRecipePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349A93EE1C7BCED700EE9177 /* UpdateRecipePresenter.swift */; };
 		349A93F01C7BCF6400EE9177 /* UpdateRecipePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349A93EE1C7BCED700EE9177 /* UpdateRecipePresenter.swift */; };
 		34CB819E1C68F93100BB2EC3 /* UIViewAutoLayoutExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CB819D1C68F93100BB2EC3 /* UIViewAutoLayoutExtension.swift */; };
+		34D44A361C93D33C00E9D09B /* Int+IntEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D44A351C93D33C00E9D09B /* Int+IntEnum.swift */; };
+		34D44A391C93D46200E9D09B /* IntEnumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D44A381C93D46200E9D09B /* IntEnumTests.swift */; };
+		34D44A3A1C93D46500E9D09B /* Int+IntEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D44A351C93D33C00E9D09B /* Int+IntEnum.swift */; };
 		34EA510A1C6A0EB400E90DB4 /* RecipesListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3425BCA51C68AED800A7662F /* RecipesListDelegate.swift */; };
 		34FB6DA31C6A27A10087B86B /* RecipesFormControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FB6DA21C6A27A10087B86B /* RecipesFormControllerDelegate.swift */; };
 		34FB6DA41C6A27A10087B86B /* RecipesFormControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FB6DA21C6A27A10087B86B /* RecipesFormControllerDelegate.swift */; };
@@ -119,6 +122,8 @@
 		349A93EB1C7BC21100EE9177 /* UpdateRecipesUsecaseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateRecipesUsecaseTests.swift; sourceTree = "<group>"; };
 		349A93EE1C7BCED700EE9177 /* UpdateRecipePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateRecipePresenter.swift; sourceTree = "<group>"; };
 		34CB819D1C68F93100BB2EC3 /* UIViewAutoLayoutExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewAutoLayoutExtension.swift; sourceTree = "<group>"; };
+		34D44A351C93D33C00E9D09B /* Int+IntEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+IntEnum.swift"; sourceTree = "<group>"; };
+		34D44A381C93D46200E9D09B /* IntEnumTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntEnumTests.swift; sourceTree = "<group>"; };
 		34FB6DA21C6A27A10087B86B /* RecipesFormControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesFormControllerDelegate.swift; sourceTree = "<group>"; };
 		34FB6DA51C6A27BA0087B86B /* RecipesListControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesListControllerDelegate.swift; sourceTree = "<group>"; };
 		34FD92581C7C77E800DA2B9B /* UpdateRecipePresenterSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateRecipePresenterSpy.swift; sourceTree = "<group>"; };
@@ -226,6 +231,7 @@
 		3452F1471C68BB3500DF68C2 /* RecipesTests */ = {
 			isa = PBXGroup;
 			children = (
+				34D44A371C93D43900E9D09B /* Extensions */,
 				34988B011C6924870059287C /* Doubles */,
 				34988AE01C691FF20059287C /* Usecases */,
 				347FC35F1C6A2D7500B5859D /* TestsBase */,
@@ -275,6 +281,7 @@
 		34988AE31C69210B0059287C /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				34D44A341C93D2C100E9D09B /* Extensions */,
 				34FB6DA11C6A27890087B86B /* Delegates */,
 				34988AE41C69210B0059287C /* Enums */,
 				34988AE71C69210B0059287C /* Gateways */,
@@ -390,6 +397,24 @@
 			);
 			name = Gateways;
 			path = Recipes/Gateways;
+			sourceTree = SOURCE_ROOT;
+		};
+		34D44A341C93D2C100E9D09B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				34D44A351C93D33C00E9D09B /* Int+IntEnum.swift */,
+			);
+			name = Extensions;
+			path = Core/Extensions;
+			sourceTree = SOURCE_ROOT;
+		};
+		34D44A371C93D43900E9D09B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				34D44A381C93D46200E9D09B /* IntEnumTests.swift */,
+			);
+			name = Extensions;
+			path = RecipesTests/Extensions;
 			sourceTree = SOURCE_ROOT;
 		};
 		34FB6DA11C6A27890087B86B /* Delegates */ = {
@@ -576,6 +601,7 @@
 				34988AF41C69212C0059287C /* CreateRecipePresenter.swift in Sources */,
 				34FB6DA31C6A27A10087B86B /* RecipesFormControllerDelegate.swift in Sources */,
 				34988AF51C69212C0059287C /* Ingredient.swift in Sources */,
+				34D44A361C93D33C00E9D09B /* Int+IntEnum.swift in Sources */,
 				34988AF61C69212C0059287C /* Recipe.swift in Sources */,
 				34988AF71C69212C0059287C /* Step.swift in Sources */,
 				34988AF81C69212C0059287C /* CreateRecipeUsecase.swift in Sources */,
@@ -607,6 +633,7 @@
 			files = (
 				34988AF91C6921590059287C /* DificultyLevel.swift in Sources */,
 				346072A41C6BF28800A67172 /* RecipeModel.swift in Sources */,
+				34D44A3A1C93D46500E9D09B /* Int+IntEnum.swift in Sources */,
 				34988AFA1C6921590059287C /* MeasureUnity.swift in Sources */,
 				349A93F01C7BCF6400EE9177 /* UpdateRecipePresenter.swift in Sources */,
 				34988AFB1C6921590059287C /* RecipeGateway.swift in Sources */,
@@ -620,6 +647,7 @@
 				34FD92591C7C77E800DA2B9B /* UpdateRecipePresenterSpy.swift in Sources */,
 				34988B0D1C69268D0059287C /* RecipeGatewayFake.swift in Sources */,
 				34FB6DA41C6A27A10087B86B /* RecipesFormControllerDelegate.swift in Sources */,
+				34D44A391C93D46200E9D09B /* IntEnumTests.swift in Sources */,
 				346072B81C6BF4DB00A67172 /* ListRecipesPresenter.swift in Sources */,
 				34988B141C692B900059287C /* RecipeError.swift in Sources */,
 				34988AFE1C6921590059287C /* Recipe.swift in Sources */,
