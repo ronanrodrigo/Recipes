@@ -43,7 +43,7 @@ class UpdateRecipesUsecaseTests: XCTestCase {
     
     func testShouldPresentTheUpdatedRecipe() {
         self.gateway.create(RecipeStruct(id: recipeId, title: "xxx", brief: "zzz", dificultyLevel: .Easy))
-        let recipeStruct: Recipe = RecipeStruct(
+        let recipeStruct = RecipeStruct(
             id: recipeId,
             title: title,
             brief: brief,
@@ -54,7 +54,7 @@ class UpdateRecipesUsecaseTests: XCTestCase {
         let recipes = self.gateway.list()
         XCTAssertEqual(1, recipes.count)
         XCTAssertEqual(title, self.presenter.spiedRecipe.title)
-        XCTAssertEqual(presenter.spiedRecipe as? RecipeStruct, recipeStruct as? RecipeStruct)
+        XCTAssertEqual(presenter.spiedRecipe as? RecipeStruct, recipeStruct)
     }
     
 }
