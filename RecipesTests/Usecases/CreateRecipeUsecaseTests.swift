@@ -28,29 +28,8 @@ class CreateRecipeUsecaseTests: XCTestCase {
     }
     
     func testShouldCreateRecipeWithAllInfos() {
-        try! self.usecase.create(self.recipe)
+        self.usecase.create(self.recipe)
         
         XCTAssertTrue(presenter.showedSpy)
-    }
-    
-    func testShouldNotCreateRecipeWithoutTitle() {
-        recipe = RecipeStruct(
-            id: 0,
-            title: "",
-            brief: "Simple and wonderful cake",
-            dificultyLevel: .Easy
-        )
-        var error: RecipeError?
-        
-        do{
-            try usecase.create(recipe)
-        } catch RecipeError.EmptyTitle {
-            error = RecipeError.EmptyTitle
-        } catch {
-            NSLog("Deu treta")
-        }
-        
-        XCTAssertFalse(presenter.showedSpy)
-        XCTAssertEqual(RecipeError.EmptyTitle, error)
     }
 }

@@ -59,16 +59,16 @@ class RecipesFormController: UIViewController {
             dificultyLevel: .Easy
         )
         
-        let presenter = CreateRecipePresenterIOS(delegate: self.delegate!)
         let gateway = RecipeGatewayRealm()
-        let usecase = CreateRecipeUsecase(gateway: gateway, presenter: presenter)
         
-        do {
-            try usecase.create(recipeStruct)
-        } catch RecipeError.EmptyTitle {
-            NSLog("%@", RecipeError.EmptyTitle.description())
-        } catch {
-            NSLog("Deu treta")
+        if recipeStruct.id != 0 {
+            let presenter = UpdateRecipePresenterIOS(delegate: self.delegate!)
+            let usecase = UpdateRecipeUsecase(gateway: gateway, presenter: presenter)
+            usecase.update(recipeStruct)
+        } else {
+            let presenter = CreateRecipePresenterIOS(delegate: self.delegate!)
+            let usecase = CreateRecipeUsecase(gateway: gateway, presenter: presenter)
+            usecase.create(recipeStruct)
         }
     }
     

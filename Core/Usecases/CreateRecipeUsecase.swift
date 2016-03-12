@@ -15,12 +15,8 @@ class CreateRecipeUsecase {
         self.presenter = presenter
     }
     
-    func create(recipe: Recipe) throws {
-        if recipe.isValid() {
-            let createdRecipe = self.gateway.create(recipe)
-            self.presenter.show(createdRecipe)
-        } else {
-            throw recipe.error()
-        }
+    func create(recipe: Recipe) {
+        let createdRecipe = self.gateway.create(recipe)
+        self.presenter.show(createdRecipe)
     }
 }

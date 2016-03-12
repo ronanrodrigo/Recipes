@@ -11,10 +11,7 @@ import RealmSwift
 
 class RecipeGatewayRealm: RecipeGateway {
     func create(recipe: Recipe) -> Recipe {
-        let recipeModel = RecipeModel()
-        recipeModel.title = recipe.title
-        recipeModel.brief = recipe.brief
-        recipeModel.dificultyLevel = recipe.dificultyLevel
+        let recipeModel = generateModel(recipe)
         recipeModel.id = Int(NSDate().timeIntervalSince1970)
         
         let realm = try! Realm()
@@ -26,7 +23,15 @@ class RecipeGatewayRealm: RecipeGateway {
     }
     
     func update(recipe: Recipe) -> Recipe {
-        return recipe
+        let recipeModel = generateModel(recipe)
+        recipeModel.id = recipe.id
+        
+        let realm = try! Realm()
+        try! realm.write {
+            realm.add(recipeModel, update: true)
+        }
+        
+        return generateStruct(recipeModel)
     }
     
     func list() -> [Recipe] {
@@ -41,6 +46,15 @@ class RecipeGatewayRealm: RecipeGateway {
             brief: recipe.brief,
             dificultyLevel: recipe.dificultyLevel
         )
+    }
+    
+    func generateModel(recipe: Recipe) -> RecipeModel {
+        let recipeModel = RecipeModel()
+        recipeModel.title = recipe.title
+        recipeModel.brief = recipe.brief
+        recipeModel.dificultyLevel = recipe.dificultyLevel
+        
+        return recipeModel
     }
     
 }
