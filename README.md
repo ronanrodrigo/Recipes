@@ -1,4 +1,7 @@
-## Recipes
+<p align="center">
+  <img width="512" src="https://raw.githubusercontent.com/ronanrodrigo/Recipes/master/Resources/LogoBorderRadiusText.gif"/>
+</p>
+
 An iOS application to manage your recipes. Created to studying **Clean Architecture**, **TDD**, **Realm** and **No Interface Building** at iOS with **Swift**.
 
 ## Run the app
