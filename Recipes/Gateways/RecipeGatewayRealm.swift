@@ -12,7 +12,7 @@ import RealmSwift
 class RecipeGatewayRealm: RecipeGateway {
     func create(recipe: Recipe) -> Recipe {
         let recipeModel = generateModel(recipe)
-        recipeModel.id = Int(NSDate().timeIntervalSince1970)
+        recipeModel.id = Int(NSDate().timeIntervalSince1970) + NSUUID().hashValue
         
         let realm = try! Realm()
         try! realm.write {
