@@ -16,12 +16,8 @@ class RecipeModel: Object, Recipe {
     dynamic var dificultyLevelRaw: Int = DificultyLevel.Easy.rawValue
     
     var dificultyLevel: DificultyLevel {
-        get {
-            return dificultyLevelRaw.toDificultyLevel()
-        }
-        set {
-            self.dificultyLevelRaw = newValue.rawValue
-        }
+        get { return dificultyLevelRaw.toDificultyLevel() }
+        set { self.dificultyLevelRaw = newValue.rawValue }
     }
     
     override static func primaryKey() -> String? {
