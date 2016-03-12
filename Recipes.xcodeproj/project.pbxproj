@@ -64,6 +64,8 @@
 		34D44A361C93D33C00E9D09B /* Int+IntEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D44A351C93D33C00E9D09B /* Int+IntEnum.swift */; };
 		34D44A391C93D46200E9D09B /* IntEnumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D44A381C93D46200E9D09B /* IntEnumTests.swift */; };
 		34D44A3A1C93D46500E9D09B /* Int+IntEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D44A351C93D33C00E9D09B /* Int+IntEnum.swift */; };
+		34D44A3D1C93D92300E9D09B /* Equatable+RecipeStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D44A3B1C93D91C00E9D09B /* Equatable+RecipeStruct.swift */; };
+		34D44A3E1C93DACD00E9D09B /* Equatable+RecipeStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D44A3B1C93D91C00E9D09B /* Equatable+RecipeStruct.swift */; };
 		34EA510A1C6A0EB400E90DB4 /* RecipesListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3425BCA51C68AED800A7662F /* RecipesListDelegate.swift */; };
 		34FB6DA31C6A27A10087B86B /* RecipesFormControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FB6DA21C6A27A10087B86B /* RecipesFormControllerDelegate.swift */; };
 		34FB6DA41C6A27A10087B86B /* RecipesFormControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FB6DA21C6A27A10087B86B /* RecipesFormControllerDelegate.swift */; };
@@ -124,6 +126,7 @@
 		34CB819D1C68F93100BB2EC3 /* UIViewAutoLayoutExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewAutoLayoutExtension.swift; sourceTree = "<group>"; };
 		34D44A351C93D33C00E9D09B /* Int+IntEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+IntEnum.swift"; sourceTree = "<group>"; };
 		34D44A381C93D46200E9D09B /* IntEnumTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntEnumTests.swift; sourceTree = "<group>"; };
+		34D44A3B1C93D91C00E9D09B /* Equatable+RecipeStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Equatable+RecipeStruct.swift"; sourceTree = "<group>"; };
 		34FB6DA21C6A27A10087B86B /* RecipesFormControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesFormControllerDelegate.swift; sourceTree = "<group>"; };
 		34FB6DA51C6A27BA0087B86B /* RecipesListControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesListControllerDelegate.swift; sourceTree = "<group>"; };
 		34FD92581C7C77E800DA2B9B /* UpdateRecipePresenterSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateRecipePresenterSpy.swift; sourceTree = "<group>"; };
@@ -403,6 +406,7 @@
 			isa = PBXGroup;
 			children = (
 				34D44A351C93D33C00E9D09B /* Int+IntEnum.swift */,
+				34D44A3B1C93D91C00E9D09B /* Equatable+RecipeStruct.swift */,
 			);
 			name = Extensions;
 			path = Core/Extensions;
@@ -611,6 +615,7 @@
 				3425BCA41C68A8FF00A7662F /* RecipesListDataSource.swift in Sources */,
 				346072BB1C6BF50700A67172 /* ListRecipesPresenter.swift in Sources */,
 				34988B181C69F41D0059287C /* RecipeGatewayRealm.swift in Sources */,
+				34D44A3D1C93D92300E9D09B /* Equatable+RecipeStruct.swift in Sources */,
 				342DCE691C68047100E6659E /* NavigationViewController.swift in Sources */,
 				34312B7D1C6AE0CA002EFD95 /* RecipeModel.swift in Sources */,
 				3425BCA61C68AED800A7662F /* RecipesListDelegate.swift in Sources */,
@@ -647,6 +652,7 @@
 				34FD92591C7C77E800DA2B9B /* UpdateRecipePresenterSpy.swift in Sources */,
 				34988B0D1C69268D0059287C /* RecipeGatewayFake.swift in Sources */,
 				34FB6DA41C6A27A10087B86B /* RecipesFormControllerDelegate.swift in Sources */,
+				34D44A3E1C93DACD00E9D09B /* Equatable+RecipeStruct.swift in Sources */,
 				34D44A391C93D46200E9D09B /* IntEnumTests.swift in Sources */,
 				346072B81C6BF4DB00A67172 /* ListRecipesPresenter.swift in Sources */,
 				34988B141C692B900059287C /* RecipeError.swift in Sources */,
