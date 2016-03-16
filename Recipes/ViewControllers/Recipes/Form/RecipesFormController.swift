@@ -34,6 +34,9 @@ class RecipesFormController: UIViewController {
     override func viewDidLoad() {
         createTableView()
         configureNavigation()
+        
+        self.tableView.backgroundColor = UIColor.background()
+        self.tableView.backgroundView = nil
     }
     
     func configureNavigation() {
