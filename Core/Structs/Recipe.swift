@@ -13,6 +13,12 @@ protocol Recipe {
     var dificultyLevel: DificultyLevel { get set }
 }
 
+extension Recipe {
+    func isNewRecipe() -> Bool {
+        return self.id == 0
+    }
+}
+
 struct RecipeStruct: Recipe {
     var id: Int
     var title: String
