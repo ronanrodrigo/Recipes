@@ -37,13 +37,13 @@ class RecipesFormController: UIViewController {
     
     override func viewDidLoad() {
         createTableView()
-        configureNavigation()
+        configureNavigationItem()
         
         self.tableView.backgroundColor = UIColor.background()
         self.tableView.backgroundView = nil
     }
     
-    func configureNavigation() {
+    func configureNavigationItem() {
         navigationItem.title = recipe != nil ? "Edit recipe" : "New recipe"
         let addButton = UIBarButtonItem(barButtonSystemItem: .Save, target: self, action: "didTapAtSaveRecipe")
         navigationItem.rightBarButtonItem = addButton
