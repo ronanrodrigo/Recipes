@@ -75,14 +75,14 @@ class RecipesFormController: UIViewController {
         
         let gateway = RecipeGatewayRealm()
         
-        if recipeStruct.id != 0 {
-            let presenter = UpdateRecipePresenterIOS(delegate: self.delegate!)
-            let usecase = UpdateRecipeUsecase(gateway: gateway, presenter: presenter)
-            usecase.update(recipeStruct)
-        } else {
+        if recipeStruct.isNewRecipe() {
             let presenter = CreateRecipePresenterIOS(delegate: self.delegate!)
             let usecase = CreateRecipeUsecase(gateway: gateway, presenter: presenter)
             usecase.create(recipeStruct)
+        } else {
+            let presenter = UpdateRecipePresenterIOS(delegate: self.delegate!)
+            let usecase = UpdateRecipeUsecase(gateway: gateway, presenter: presenter)
+            usecase.update(recipeStruct)
         }
     }
     
