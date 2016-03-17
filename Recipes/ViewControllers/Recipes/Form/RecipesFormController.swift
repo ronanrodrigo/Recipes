@@ -15,8 +15,9 @@ class RecipesFormController: UIViewController {
     var tableViewDataSource: RecipesFormDataSource?
     var recipe: Recipe?
     
-    let recipesFieldsCellIdentifier: String = "RecipesFieldsCell"
-    let recipesIngredientsCellIdentifier: String = "RecipesIngredientsCell"
+    let fieldsCellIdentifier = "FieldsCell"
+    let ingredientsCellIdentifier = "IngredientsCell"
+    let stepsCellIdentifier = "StepsCell"
     
     init(delegate: RecipesFormControllerDelegate) {
         self.delegate = delegate
@@ -52,12 +53,14 @@ class RecipesFormController: UIViewController {
         self.tableView = UITableView(frame: view.frame, style: .Grouped)
         tableViewDataSource = RecipesFormDataSource(
             recipe: recipe,
-            recipesFieldsCellIdentifier: recipesFieldsCellIdentifier,
-            recipesIngredientsCellIdentifier: recipesIngredientsCellIdentifier
+            fieldsCellIdentifier: fieldsCellIdentifier,
+            ingredientsCellIdentifier: ingredientsCellIdentifier,
+            stepsCellIdentifier: stepsCellIdentifier
         )
         tableView.dataSource = tableViewDataSource
-        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: recipesFieldsCellIdentifier)
-        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: recipesIngredientsCellIdentifier)
+        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: fieldsCellIdentifier)
+        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: ingredientsCellIdentifier)
+        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: stepsCellIdentifier)
         tableView.frame = view.frame
         view.addSubview(tableView)
     }

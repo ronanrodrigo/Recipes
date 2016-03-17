@@ -14,16 +14,19 @@ class RecipesFormDataSource: NSObject, UITableViewDataSource {
     var recipeTitle: UITextField!
     var recipeDescription: UITextField!
     var recipe: Recipe?
-    var recipesFieldsCellIdentifier: String
-    var recipesIngredientsCellIdentifier: String
+    var fieldsCellIdentifier: String
+    var ingredientsCellIdentifier: String
+    var stepsCellIdentifier: String
     
-    let recipeFieldsSection = 0
-    let recipeIngredientsSection = 1
+    let fieldsSection = 0
+    let ingredientsSection = 1
+    let stepsSection = 2
     
-    init(recipe: Recipe?, recipesFieldsCellIdentifier: String, recipesIngredientsCellIdentifier: String) {
+    init(recipe: Recipe?, fieldsCellIdentifier: String, ingredientsCellIdentifier: String, stepsCellIdentifier: String) {
         self.recipe = recipe
-        self.recipesFieldsCellIdentifier = recipesFieldsCellIdentifier
-        self.recipesIngredientsCellIdentifier = recipesIngredientsCellIdentifier
+        self.fieldsCellIdentifier = fieldsCellIdentifier
+        self.ingredientsCellIdentifier = ingredientsCellIdentifier
+        self.stepsCellIdentifier = stepsCellIdentifier
         
         super.init()
         
@@ -32,20 +35,22 @@ class RecipesFormDataSource: NSObject, UITableViewDataSource {
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
-        case recipeFieldsSection: return "Recipe infos"
-        case recipeIngredientsSection: return "Ingredients"
+        case fieldsSection: return "Recipe infos"
+        case ingredientsSection: return "Ingredients"
+        case stepsSection: return "Steps"
         default: return ""
         }
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
-        case recipeFieldsSection: return recipeFields.count
-        case recipeIngredientsSection: return 1
+        case fieldsSection: return recipeFields.count
+        case ingredientsSection: return 1
+        case stepsSection: return 1
         default: return 0
         }
     }
@@ -53,13 +58,17 @@ class RecipesFormDataSource: NSObject, UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell: UITableViewCell!
         
-        if indexPath.section == recipeFieldsSection {
-            cell = tableView.dequeueReusableCellWithIdentifier(recipesFieldsCellIdentifier, forIndexPath: indexPath)
+        switch indexPath.section {
+        case fieldsSection:
+            cell = tableView.dequeueReusableCellWithIdentifier(fieldsCellIdentifier, forIndexPath: indexPath)
             recipeField(indexPath, cell: cell)
             cell.selectionStyle = UITableViewCellSelectionStyle.None
-        } else {
-            cell = tableView.dequeueReusableCellWithIdentifier(recipesIngredientsCellIdentifier, forIndexPath: indexPath)
+        case ingredientsSection:
+            cell = tableView.dequeueReusableCellWithIdentifier(ingredientsCellIdentifier, forIndexPath: indexPath)
             recipeIngredientsCell(cell)
+        default:
+            cell = tableView.dequeueReusableCellWithIdentifier(stepsCellIdentifier, forIndexPath: indexPath)
+            recipeStepsCell(cell)
         }
         
         return cell
@@ -90,6 +99,12 @@ class RecipesFormDataSource: NSObject, UITableViewDataSource {
     
     func recipeIngredientsCell(cell: UITableViewCell) {
         cell.textLabel?.text = "Add ingredients"
+        cell.textLabel?.textColor = UIColor.secondaryText()
+        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+    }
+    
+    func recipeStepsCell(cell: UITableViewCell) {
+        cell.textLabel?.text = "Add steps"
         cell.textLabel?.textColor = UIColor.secondaryText()
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
     }
