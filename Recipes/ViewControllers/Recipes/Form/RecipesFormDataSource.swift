@@ -98,13 +98,15 @@ class RecipesFormDataSource: NSObject, UITableViewDataSource {
     }
     
     func recipeIngredientsCell(cell: UITableViewCell) {
-        cell.textLabel?.text = "Add ingredients"
-        cell.textLabel?.textColor = UIColor.secondaryText()
-        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+        disclosureIndicatorCell(cell, text: "Add ingredients")
     }
     
     func recipeStepsCell(cell: UITableViewCell) {
-        cell.textLabel?.text = "Add steps"
+        disclosureIndicatorCell(cell, text: "Add steps")
+    }
+    
+    func disclosureIndicatorCell(cell: UITableViewCell, text: String) {
+        cell.textLabel?.text = text
         cell.textLabel?.textColor = UIColor.secondaryText()
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
     }
