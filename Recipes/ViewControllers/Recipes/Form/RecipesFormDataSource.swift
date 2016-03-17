@@ -10,38 +10,58 @@ import Foundation
 import UIKit
 
 class RecipesFormDataSource: NSObject, UITableViewDataSource {
-    var cellIdentifier: String
     var recipeFields: [UITextField]!
     var recipeTitle: UITextField!
     var recipeDescription: UITextField!
     var recipe: Recipe?
+    var recipesFieldsCellIdentifier: String
+    var recipesIngredientsCellIdentifier: String
     
-    init(cellIdentifier: String, recipe: Recipe?) {
-        self.cellIdentifier = cellIdentifier
+    let recipeFieldsSection = 0
+    let recipeIngredientsSection = 1
+    
+    init(recipe: Recipe?, recipesFieldsCellIdentifier: String, recipesIngredientsCellIdentifier: String) {
         self.recipe = recipe
+        self.recipesFieldsCellIdentifier = recipesFieldsCellIdentifier
+        self.recipesIngredientsCellIdentifier = recipesIngredientsCellIdentifier
+        
         super.init()
+        
         createRecipeFields()
     }
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section == 0 {
-            return "Recipe infos"
+        switch section {
+        case recipeFieldsSection: return "Recipe infos"
+        case recipeIngredientsSection: return "Ingredients"
+        default: return ""
         }
-        return ""
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return recipeFields.count
+        switch section {
+        case recipeFieldsSection: return recipeFields.count
+        case recipeIngredientsSection: return 1
+        default: return 0
+        }
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath)
-        recipeField(indexPath, cell: cell)
-        cell.selectionStyle = UITableViewCellSelectionStyle.None
+        var cell: UITableViewCell!
+        
+        if indexPath.section == recipeFieldsSection {
+            cell = tableView.dequeueReusableCellWithIdentifier(recipesFieldsCellIdentifier, forIndexPath: indexPath)
+            recipeField(indexPath, cell: cell)
+            cell.selectionStyle = UITableViewCellSelectionStyle.None
+        } else {
+            cell = tableView.dequeueReusableCellWithIdentifier(recipesIngredientsCellIdentifier, forIndexPath: indexPath)
+            recipeIngredientsCell(cell)
+        }
+        
         return cell
     }
     
@@ -66,5 +86,11 @@ class RecipesFormDataSource: NSObject, UITableViewDataSource {
         cell.addSubview(textField)
         cell.addConstraints(textField.stretchToHeightOfSuperView(0))
         cell.addConstraints(textField.stretchToWidthOfSuperView(15))
+    }
+    
+    func recipeIngredientsCell(cell: UITableViewCell) {
+        cell.textLabel?.text = "Add ingredients"
+        cell.textLabel?.textColor = UIColor.secondaryText()
+        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
     }
 }
