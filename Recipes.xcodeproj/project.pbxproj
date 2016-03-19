@@ -29,6 +29,8 @@
 		346CD3A01C9A20CE000F5E60 /* ColorsSchemes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346CD39F1C9A20CE000F5E60 /* ColorsSchemes.swift */; };
 		3476D6841C9D943C00B7A911 /* IngredientsFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3476D6831C9D943C00B7A911 /* IngredientsFormController.swift */; };
 		3476D6861C9D950100B7A911 /* RecipesFormTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3476D6851C9D950100B7A911 /* RecipesFormTableViewDelegate.swift */; };
+		3476D6871C9D9D4800B7A911 /* RecipesFormTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3476D6851C9D950100B7A911 /* RecipesFormTableViewDelegate.swift */; };
+		3476D6881C9D9D5C00B7A911 /* ColorsSchemes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346CD39F1C9A20CE000F5E60 /* ColorsSchemes.swift */; };
 		34988AE21C6920130059287C /* CreateRecipeUsecaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34988AE11C6920130059287C /* CreateRecipeUsecaseTests.swift */; };
 		34988AF11C69212C0059287C /* DificultyLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34988AE51C69210B0059287C /* DificultyLevel.swift */; };
 		34988AF21C69212C0059287C /* MeasureUnity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34988AE61C69210B0059287C /* MeasureUnity.swift */; };
@@ -680,7 +682,9 @@
 				34988AFE1C6921590059287C /* Recipe.swift in Sources */,
 				34988B1D1C69FF070059287C /* RecipesFormController.swift in Sources */,
 				34FB6DA71C6A27BA0087B86B /* RecipesListControllerDelegate.swift in Sources */,
+				3476D6881C9D9D5C00B7A911 /* ColorsSchemes.swift in Sources */,
 				34988AFF1C6921590059287C /* Step.swift in Sources */,
+				3476D6871C9D9D4800B7A911 /* RecipesFormTableViewDelegate.swift in Sources */,
 				349A93EC1C7BC21100EE9177 /* UpdateRecipesUsecaseTests.swift in Sources */,
 				34988B001C6921590059287C /* CreateRecipeUsecase.swift in Sources */,
 				34988AE21C6920130059287C /* CreateRecipeUsecaseTests.swift in Sources */,
