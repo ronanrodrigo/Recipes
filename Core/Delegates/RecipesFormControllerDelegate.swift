@@ -8,4 +8,5 @@
 
 protocol RecipesFormControllerDelegate {
     func didTapAtSaveRecipe(savedRecipe: Recipe)
+    func didTapeedAtAddIngredients()
 }
