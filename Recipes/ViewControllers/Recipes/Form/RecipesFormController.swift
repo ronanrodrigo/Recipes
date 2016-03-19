@@ -11,9 +11,11 @@ import UIKit
 
 class RecipesFormController: UIViewController {
     var delegate: RecipesFormControllerDelegate?
-    var tableView: UITableView!
-    var tableViewDataSource: RecipesFormDataSource?
     var recipe: Recipe?
+    
+    var tableView: UITableView!
+    var tableViewDataSource: RecipesFormTableViewDataSource?
+    var tableViewDelegate: RecipesFormTableViewDelegate?
     
     let fieldsCellIdentifier = "FieldsCell"
     let ingredientsCellIdentifier = "IngredientsCell"
@@ -50,19 +52,34 @@ class RecipesFormController: UIViewController {
     }
     
     func createTableView() {
-        self.tableView = UITableView(frame: view.frame, style: .Grouped)
-        tableViewDataSource = RecipesFormDataSource(
+        tableView = UITableView(frame: view.frame, style: .Grouped)
+        
+        addDataSourceToTableView()
+        addDelegateToTableView()
+        registerCellsToTableView()
+        
+        view.addSubview(tableView)
+    }
+    
+    func addDataSourceToTableView() {
+        tableViewDataSource = RecipesFormTableViewDataSource(
             recipe: recipe,
             fieldsCellIdentifier: fieldsCellIdentifier,
             ingredientsCellIdentifier: ingredientsCellIdentifier,
             stepsCellIdentifier: stepsCellIdentifier
         )
         tableView.dataSource = tableViewDataSource
+    }
+    
+    func addDelegateToTableView() {
+        tableViewDelegate = RecipesFormTableViewDelegate(delegate: delegate!)
+        tableView.delegate = tableViewDelegate
+    }
+    
+    func registerCellsToTableView() {
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: fieldsCellIdentifier)
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: ingredientsCellIdentifier)
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: stepsCellIdentifier)
-        tableView.frame = view.frame
-        view.addSubview(tableView)
     }
     
     func didTapAtSaveRecipe() {
