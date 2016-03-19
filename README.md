@@ -1,4 +1,4 @@
-## [![Build status](https://badge.buildkite.com/0a2b992b8cabf8065cee0d4ea28e5a04370c9552f26bbf3de9.svg)](https://buildkite.com/ronanrodrigo/recipes)
+## [![Build Status](https://www.bitrise.io/app/286eac2fb1a0951d.svg?token=uKuOKxFunA5GbgmwnTuFnA&branch=master)](https://www.bitrise.io/app/286eac2fb1a0951d)
 
 <p align="center">
   <img width="512" src="https://raw.githubusercontent.com/ronanrodrigo/Recipes/master/Resources/LogoBorderRadiusText.gif"/>
