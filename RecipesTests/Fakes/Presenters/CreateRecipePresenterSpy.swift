@@ -10,6 +10,6 @@ class CreateRecipePresenterSpy: CreateRecipePresenter {
     var showedSpy: Bool = false
     
     func show(recipe: Recipe) {
-        self.showedSpy = true
+        showedSpy = true
     }
 }

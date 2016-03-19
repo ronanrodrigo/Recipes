@@ -16,6 +16,6 @@ class ListRecipesUsecase {
     }
     
     func list() {
-        self.presenter.list(self.gateway.list())
+        presenter.list(gateway.list())
     }
 }

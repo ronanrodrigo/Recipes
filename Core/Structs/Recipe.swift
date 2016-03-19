@@ -15,7 +15,7 @@ protocol Recipe {
 
 extension Recipe {
     func isNewRecipe() -> Bool {
-        return self.id == 0
+        return id == 0
     }
 }
 

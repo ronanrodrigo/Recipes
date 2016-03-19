@@ -28,7 +28,7 @@ class CreateRecipeUsecaseTests: XCTestCase {
     }
     
     func testShouldCreateRecipeWithAllInfos() {
-        self.usecase.create(self.recipe)
+        usecase.create(recipe)
         
         XCTAssertTrue(presenter.showedSpy)
     }

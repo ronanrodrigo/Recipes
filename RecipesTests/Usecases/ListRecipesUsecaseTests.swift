@@ -16,15 +16,15 @@ class ListRecipesUsecaseTests: XCTestCase {
     override func setUp() {
         presenter = ListRecipesPresenterSpy()
         gateway = RecipeGatewayFake()
-        self.usecase = ListRecipesUsecase(gateway: gateway, presenter: presenter)
+        usecase = ListRecipesUsecase(gateway: gateway, presenter: presenter)
     }
     
     func testShouldListAllRecipes() {
         createRecipe()
         
-        self.usecase.list()
+        usecase.list()
         
-        XCTAssertEqual(self.gateway.recipes.count, self.presenter.recipesSpy.count)
+        XCTAssertEqual(gateway.recipes.count, presenter.recipesSpy.count)
     }
     
     func createRecipe() {

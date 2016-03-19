@@ -18,10 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         navigationController = NavigationViewController()
-        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        self.window?.rootViewController = navigationController
-        self.window!.backgroundColor = UIColor.whiteColor()
-        self.window!.makeKeyAndVisible()
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        window?.rootViewController = navigationController
+        window!.backgroundColor = UIColor.whiteColor()
+        window!.makeKeyAndVisible()
         return true
     }
     

@@ -17,6 +17,6 @@ class RecipesFormTableViewDelegate: NSObject, UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.delegate.didTapeedAtAddIngredients()
+        delegate.didTapeedAtAddIngredients()
     }
 }

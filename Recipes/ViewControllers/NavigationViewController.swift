@@ -37,23 +37,23 @@ class NavigationViewController: UINavigationController, RecipesListControllerDel
     
     func didTapAtNewRecipe() {
         let recipesFormController = RecipesFormController(delegate: self)
-        self.pushViewController(recipesFormController, animated: true)
+        pushViewController(recipesFormController, animated: true)
     }
     
     func didSelectRecipe(recipe: Recipe) {
         let recipesFormController = RecipesFormController(delegate: self, recipe: recipe)
-        self.pushViewController(recipesFormController, animated: true)
+        pushViewController(recipesFormController, animated: true)
     }
     
     // MARK: RecipesFormControllerDelegate
     
     func didTapAtSaveRecipe(recipe: Recipe) {
-        self.popViewControllerAnimated(true)
+        popViewControllerAnimated(true)
     }
     
     func didTapeedAtAddIngredients() {
         let ingredientsFomrController = IngredientsFormController()
-        self.pushViewController(ingredientsFomrController, animated: true)
+        pushViewController(ingredientsFomrController, animated: true)
     }
     
 }

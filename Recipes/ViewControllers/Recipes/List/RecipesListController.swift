@@ -25,7 +25,7 @@ class RecipesListController: UIViewController {
     }
     
     override func viewDidLoad() {
-        tableView = UITableView(frame: self.view.frame)
+        tableView = UITableView(frame: view.frame)
         gateway = RecipeGatewayRealm()
         presenter = ListRecipesPresenterIOS(view: view, recipesListControllerDelegate: delegate!, tableView: tableView)
         usecase = ListRecipesUsecase(gateway: gateway, presenter: presenter)
@@ -44,8 +44,8 @@ class RecipesListController: UIViewController {
     }
     
     func didTapAtNewRecipe(){
-        if let delegate = self.delegate {
-            delegate.didTapAtNewRecipe()
+        if let _delegate = delegate {
+            _delegate.didTapAtNewRecipe()
         }
     }
 }

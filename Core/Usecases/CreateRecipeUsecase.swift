@@ -16,7 +16,7 @@ class CreateRecipeUsecase {
     }
     
     func create(recipe: Recipe) {
-        let createdRecipe = self.gateway.create(recipe)
-        self.presenter.show(createdRecipe)
+        let createdRecipe = gateway.create(recipe)
+        presenter.show(createdRecipe)
     }
 }

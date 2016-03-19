@@ -16,6 +16,6 @@ class CreateRecipePresenterIOS: CreateRecipePresenter {
     }
     
     func show(recipe: Recipe) {
-        self.delegate.didTapAtSaveRecipe(recipe)
+        delegate.didTapAtSaveRecipe(recipe)
     }
 }

@@ -26,15 +26,15 @@ class UpdateRecipesUsecaseTests: XCTestCase {
     }
     
     func testShouldUpdateAnExistRecipe() {
-        self.gateway.create(RecipeStruct(id: recipeId, title: "xxx", brief: "zzz", dificultyLevel: .Easy))
+        gateway.create(RecipeStruct(id: recipeId, title: "xxx", brief: "zzz", dificultyLevel: .Easy))
         
-        self.usecase.update(RecipeStruct(
+        usecase.update(RecipeStruct(
             id: recipeId,
             title: title,
             brief: brief,
             dificultyLevel: dificultyLevel))
         
-        let recipes = self.gateway.list()
+        let recipes = gateway.list()
         XCTAssertEqual(1, recipes.count)
         XCTAssertEqual(title, recipes.first?.title)
         XCTAssertEqual(brief, recipes.first?.brief)
@@ -42,18 +42,18 @@ class UpdateRecipesUsecaseTests: XCTestCase {
     }
     
     func testShouldPresentTheUpdatedRecipe() {
-        self.gateway.create(RecipeStruct(id: recipeId, title: "xxx", brief: "zzz", dificultyLevel: .Easy))
+        gateway.create(RecipeStruct(id: recipeId, title: "xxx", brief: "zzz", dificultyLevel: .Easy))
         let recipeStruct = RecipeStruct(
             id: recipeId,
             title: title,
             brief: brief,
             dificultyLevel: dificultyLevel)
         
-        self.usecase.update(recipeStruct)
+        usecase.update(recipeStruct)
         
-        let recipes = self.gateway.list()
+        let recipes = gateway.list()
         XCTAssertEqual(1, recipes.count)
-        XCTAssertEqual(title, self.presenter.spiedRecipe.title)
+        XCTAssertEqual(title, presenter.spiedRecipe.title)
         XCTAssertEqual(presenter.spiedRecipe as? RecipeStruct, recipeStruct)
     }
     

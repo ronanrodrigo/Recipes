@@ -75,18 +75,18 @@ class RecipesFormTableViewDataSource: NSObject, UITableViewDataSource {
     }
     
     func createRecipeFields() {
-        self.recipeTitle = UITextField()
-        self.recipeTitle.placeholder = "Title"
+        recipeTitle = UITextField()
+        recipeTitle.placeholder = "Title"
         
-        self.recipeDescription = UITextField()
-        self.recipeDescription.placeholder = "Description"
+        recipeDescription = UITextField()
+        recipeDescription.placeholder = "Description"
         
-        if let recipe = self.recipe {
-            self.recipeTitle.text = recipe.title
-            self.recipeDescription.text = recipe.brief
+        if let _recipe = recipe {
+            recipeTitle.text = _recipe.title
+            recipeDescription.text = _recipe.brief
         }
         
-        self.recipeFields = [self.recipeTitle, self.recipeDescription]
+        recipeFields = [recipeTitle, recipeDescription]
     }
     
     func recipeField(indexPath: NSIndexPath, cell: UITableViewCell) {

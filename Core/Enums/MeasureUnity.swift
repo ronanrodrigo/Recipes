@@ -20,7 +20,7 @@ enum MeasureUnity: String {
         case .SoupSpoon:
             return "Soup spoon"
         default:
-            return self.rawValue
+            return rawValue
         }
     }
 }

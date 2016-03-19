@@ -41,8 +41,8 @@ class RecipesFormController: UIViewController {
         createTableView()
         configureNavigationItem()
         
-        self.tableView.backgroundColor = UIColor.background()
-        self.tableView.backgroundView = nil
+        tableView.backgroundColor = UIColor.background()
+        tableView.backgroundView = nil
     }
     
     func configureNavigationItem() {
@@ -93,11 +93,11 @@ class RecipesFormController: UIViewController {
         let gateway = RecipeGatewayRealm()
         
         if recipeStruct.isNewRecipe() {
-            let presenter = CreateRecipePresenterIOS(delegate: self.delegate!)
+            let presenter = CreateRecipePresenterIOS(delegate: delegate!)
             let usecase = CreateRecipeUsecase(gateway: gateway, presenter: presenter)
             usecase.create(recipeStruct)
         } else {
-            let presenter = UpdateRecipePresenterIOS(delegate: self.delegate!)
+            let presenter = UpdateRecipePresenterIOS(delegate: delegate!)
             let usecase = UpdateRecipeUsecase(gateway: gateway, presenter: presenter)
             usecase.update(recipeStruct)
         }
