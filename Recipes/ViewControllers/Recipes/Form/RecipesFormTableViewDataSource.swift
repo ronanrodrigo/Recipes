@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class RecipesFormDataSource: NSObject, UITableViewDataSource {
+class RecipesFormTableViewDataSource: NSObject, UITableViewDataSource {
     var recipeFields: [UITextField]!
     var recipeTitle: UITextField!
     var recipeDescription: UITextField!
