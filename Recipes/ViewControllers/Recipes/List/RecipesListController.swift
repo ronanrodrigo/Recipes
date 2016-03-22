@@ -39,7 +39,7 @@ class RecipesListController: UIViewController {
     
     func configureNavigation() {
         navigationItem.title = "Recipes"
-        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(RecipesListController.didTapAtNewRecipe))
+        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(didTapAtNewRecipe))
         navigationItem.rightBarButtonItem = addButton
     }
     
