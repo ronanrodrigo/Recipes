@@ -14,24 +14,41 @@
 		342DCE5A1C67FB1000E6659E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 342DCE581C67FB1000E6659E /* LaunchScreen.storyboard */; };
 		342DCE691C68047100E6659E /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342DCE681C68047100E6659E /* NavigationViewController.swift */; };
 		342DCE6B1C680C9500E6659E /* RecipesListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342DCE6A1C680C9500E6659E /* RecipesListController.swift */; };
-		34312B7D1C6AE0CA002EFD95 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34312B7C1C6AE0CA002EFD95 /* RecipeModel.swift */; };
 		3451BB041C93E7B10077008B /* UpdateRecipePresenterIOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3451BB031C93E7B10077008B /* UpdateRecipePresenterIOS.swift */; };
 		3452F1521C68CAEC00DF68C2 /* RecipesFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3452F1511C68CAEC00DF68C2 /* RecipesFormController.swift */; };
 		3452F1561C68DD3B00DF68C2 /* RecipesFormTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3452F1551C68DD3B00DF68C2 /* RecipesFormTableViewDataSource.swift */; };
-		346072A41C6BF28800A67172 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34312B7C1C6AE0CA002EFD95 /* RecipeModel.swift */; };
-		346072B61C6BF39A00A67172 /* ListRecipesUsecaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346072B51C6BF39A00A67172 /* ListRecipesUsecaseTests.swift */; };
-		346072B81C6BF4DB00A67172 /* ListRecipesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346072B71C6BF4DB00A67172 /* ListRecipesPresenter.swift */; };
-		346072BA1C6BF4FD00A67172 /* ListRecipesPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346072B91C6BF4FD00A67172 /* ListRecipesPresenterSpy.swift */; };
 		346072BB1C6BF50700A67172 /* ListRecipesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346072B71C6BF4DB00A67172 /* ListRecipesPresenter.swift */; };
-		346072BD1C6BF5D300A67172 /* ListRecipesUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346072BC1C6BF5D300A67172 /* ListRecipesUsecase.swift */; };
 		346072C01C6BF88E00A67172 /* ListRecipesIOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346072BF1C6BF88E00A67172 /* ListRecipesIOS.swift */; };
 		346072C11C6BF99800A67172 /* ListRecipesUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346072BC1C6BF5D300A67172 /* ListRecipesUsecase.swift */; };
 		346CD3A01C9A20CE000F5E60 /* ColorsSchemes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346CD39F1C9A20CE000F5E60 /* ColorsSchemes.swift */; };
 		3476D6841C9D943C00B7A911 /* IngredientsFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3476D6831C9D943C00B7A911 /* IngredientsFormController.swift */; };
 		3476D6861C9D950100B7A911 /* RecipesFormTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3476D6851C9D950100B7A911 /* RecipesFormTableViewDelegate.swift */; };
-		3476D6871C9D9D4800B7A911 /* RecipesFormTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3476D6851C9D950100B7A911 /* RecipesFormTableViewDelegate.swift */; };
-		3476D6881C9D9D5C00B7A911 /* ColorsSchemes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346CD39F1C9A20CE000F5E60 /* ColorsSchemes.swift */; };
-		34988AE21C6920130059287C /* CreateRecipeUsecaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34988AE11C6920130059287C /* CreateRecipeUsecaseTests.swift */; };
+		349047BF1CA1EE45001CFB04 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34312B7C1C6AE0CA002EFD95 /* RecipeModel.swift */; };
+		349047C01CA1EF88001CFB04 /* Int+IntEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D44A351C93D33C00E9D09B /* Int+IntEnum.swift */; };
+		349047C11CA1EF88001CFB04 /* Equatable+RecipeStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D44A3B1C93D91C00E9D09B /* Equatable+RecipeStruct.swift */; };
+		349047C21CA1EF88001CFB04 /* RecipesFormControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FB6DA21C6A27A10087B86B /* RecipesFormControllerDelegate.swift */; };
+		349047C31CA1EF88001CFB04 /* RecipesListControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FB6DA51C6A27BA0087B86B /* RecipesListControllerDelegate.swift */; };
+		349047C41CA1EF88001CFB04 /* DificultyLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34988AE51C69210B0059287C /* DificultyLevel.swift */; };
+		349047C51CA1EF88001CFB04 /* MeasureUnity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34988AE61C69210B0059287C /* MeasureUnity.swift */; };
+		349047C61CA1EF88001CFB04 /* RecipeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34988B121C692B900059287C /* RecipeError.swift */; };
+		349047C71CA1EF88001CFB04 /* RecipeGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34988AE81C69210B0059287C /* RecipeGateway.swift */; };
+		349047C81CA1EF88001CFB04 /* CreateRecipePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34988AEA1C69210B0059287C /* CreateRecipePresenter.swift */; };
+		349047C91CA1EF88001CFB04 /* ListRecipesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346072B71C6BF4DB00A67172 /* ListRecipesPresenter.swift */; };
+		349047CA1CA1EF88001CFB04 /* UpdateRecipePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349A93EE1C7BCED700EE9177 /* UpdateRecipePresenter.swift */; };
+		349047CB1CA1EF88001CFB04 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34988AEC1C69210B0059287C /* Ingredient.swift */; };
+		349047CC1CA1EF88001CFB04 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34988AED1C69210B0059287C /* Recipe.swift */; };
+		349047CD1CA1EF88001CFB04 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34988AEE1C69210B0059287C /* Step.swift */; };
+		349047CE1CA1EF88001CFB04 /* CreateRecipeUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34988AF01C69210B0059287C /* CreateRecipeUsecase.swift */; };
+		349047CF1CA1EF88001CFB04 /* ListRecipesUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346072BC1C6BF5D300A67172 /* ListRecipesUsecase.swift */; };
+		349047D01CA1EF88001CFB04 /* UpdateRecipeUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349A93E91C7BC1A500EE9177 /* UpdateRecipeUsecase.swift */; };
+		349047D11CA1EFA0001CFB04 /* IntEnumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D44A381C93D46200E9D09B /* IntEnumTests.swift */; };
+		349047D21CA1EFA0001CFB04 /* RecipeGatewayFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34988B0C1C69268D0059287C /* RecipeGatewayFake.swift */; };
+		349047D31CA1EFA0001CFB04 /* CreateRecipePresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34988B021C6924AA0059287C /* CreateRecipePresenterSpy.swift */; };
+		349047D41CA1EFA0001CFB04 /* ListRecipesPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346072B91C6BF4FD00A67172 /* ListRecipesPresenterSpy.swift */; };
+		349047D51CA1EFA0001CFB04 /* UpdateRecipePresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FD92581C7C77E800DA2B9B /* UpdateRecipePresenterSpy.swift */; };
+		349047D61CA1EFA0001CFB04 /* CreateRecipeUsecaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34988AE11C6920130059287C /* CreateRecipeUsecaseTests.swift */; };
+		349047D71CA1EFA0001CFB04 /* ListRecipesUsecaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346072B51C6BF39A00A67172 /* ListRecipesUsecaseTests.swift */; };
+		349047D81CA1EFA0001CFB04 /* UpdateRecipesUsecaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349A93EB1C7BC21100EE9177 /* UpdateRecipesUsecaseTests.swift */; };
 		34988AF11C69212C0059287C /* DificultyLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34988AE51C69210B0059287C /* DificultyLevel.swift */; };
 		34988AF21C69212C0059287C /* MeasureUnity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34988AE61C69210B0059287C /* MeasureUnity.swift */; };
 		34988AF31C69212C0059287C /* RecipeGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34988AE81C69210B0059287C /* RecipeGateway.swift */; };
@@ -40,43 +57,16 @@
 		34988AF61C69212C0059287C /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34988AED1C69210B0059287C /* Recipe.swift */; };
 		34988AF71C69212C0059287C /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34988AEE1C69210B0059287C /* Step.swift */; };
 		34988AF81C69212C0059287C /* CreateRecipeUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34988AF01C69210B0059287C /* CreateRecipeUsecase.swift */; };
-		34988AF91C6921590059287C /* DificultyLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34988AE51C69210B0059287C /* DificultyLevel.swift */; };
-		34988AFA1C6921590059287C /* MeasureUnity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34988AE61C69210B0059287C /* MeasureUnity.swift */; };
-		34988AFB1C6921590059287C /* RecipeGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34988AE81C69210B0059287C /* RecipeGateway.swift */; };
-		34988AFC1C6921590059287C /* CreateRecipePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34988AEA1C69210B0059287C /* CreateRecipePresenter.swift */; };
-		34988AFD1C6921590059287C /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34988AEC1C69210B0059287C /* Ingredient.swift */; };
-		34988AFE1C6921590059287C /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34988AED1C69210B0059287C /* Recipe.swift */; };
-		34988AFF1C6921590059287C /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34988AEE1C69210B0059287C /* Step.swift */; };
-		34988B001C6921590059287C /* CreateRecipeUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34988AF01C69210B0059287C /* CreateRecipeUsecase.swift */; };
-		34988B031C6924AA0059287C /* CreateRecipePresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34988B021C6924AA0059287C /* CreateRecipePresenterSpy.swift */; };
-		34988B0D1C69268D0059287C /* RecipeGatewayFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34988B0C1C69268D0059287C /* RecipeGatewayFake.swift */; };
 		34988B131C692B900059287C /* RecipeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34988B121C692B900059287C /* RecipeError.swift */; };
-		34988B141C692B900059287C /* RecipeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34988B121C692B900059287C /* RecipeError.swift */; };
 		34988B181C69F41D0059287C /* RecipeGatewayRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34988B171C69F41D0059287C /* RecipeGatewayRealm.swift */; };
-		34988B191C69F41D0059287C /* RecipeGatewayRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34988B171C69F41D0059287C /* RecipeGatewayRealm.swift */; };
 		34988B1B1C69F4580059287C /* CreateRecipePresenterIOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34988B1A1C69F4580059287C /* CreateRecipePresenterIOS.swift */; };
-		34988B1C1C69F4580059287C /* CreateRecipePresenterIOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34988B1A1C69F4580059287C /* CreateRecipePresenterIOS.swift */; };
-		34988B1D1C69FF070059287C /* RecipesFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3452F1511C68CAEC00DF68C2 /* RecipesFormController.swift */; };
-		34988B1E1C69FF1A0059287C /* RecipesFormTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3452F1551C68DD3B00DF68C2 /* RecipesFormTableViewDataSource.swift */; };
-		34988B1F1C69FF260059287C /* UIViewAutoLayoutExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CB819D1C68F93100BB2EC3 /* UIViewAutoLayoutExtension.swift */; };
 		349A93EA1C7BC1A500EE9177 /* UpdateRecipeUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349A93E91C7BC1A500EE9177 /* UpdateRecipeUsecase.swift */; };
-		349A93EC1C7BC21100EE9177 /* UpdateRecipesUsecaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349A93EB1C7BC21100EE9177 /* UpdateRecipesUsecaseTests.swift */; };
-		349A93ED1C7BC21600EE9177 /* UpdateRecipeUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349A93E91C7BC1A500EE9177 /* UpdateRecipeUsecase.swift */; };
 		349A93EF1C7BCED700EE9177 /* UpdateRecipePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349A93EE1C7BCED700EE9177 /* UpdateRecipePresenter.swift */; };
-		349A93F01C7BCF6400EE9177 /* UpdateRecipePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349A93EE1C7BCED700EE9177 /* UpdateRecipePresenter.swift */; };
 		34CB819E1C68F93100BB2EC3 /* UIViewAutoLayoutExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CB819D1C68F93100BB2EC3 /* UIViewAutoLayoutExtension.swift */; };
-		34D04AEA1C96FA2D00390325 /* UpdateRecipePresenterIOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3451BB031C93E7B10077008B /* UpdateRecipePresenterIOS.swift */; };
 		34D44A361C93D33C00E9D09B /* Int+IntEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D44A351C93D33C00E9D09B /* Int+IntEnum.swift */; };
-		34D44A391C93D46200E9D09B /* IntEnumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D44A381C93D46200E9D09B /* IntEnumTests.swift */; };
-		34D44A3A1C93D46500E9D09B /* Int+IntEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D44A351C93D33C00E9D09B /* Int+IntEnum.swift */; };
 		34D44A3D1C93D92300E9D09B /* Equatable+RecipeStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D44A3B1C93D91C00E9D09B /* Equatable+RecipeStruct.swift */; };
-		34D44A3E1C93DACD00E9D09B /* Equatable+RecipeStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D44A3B1C93D91C00E9D09B /* Equatable+RecipeStruct.swift */; };
-		34EA510A1C6A0EB400E90DB4 /* RecipesListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3425BCA51C68AED800A7662F /* RecipesListDelegate.swift */; };
 		34FB6DA31C6A27A10087B86B /* RecipesFormControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FB6DA21C6A27A10087B86B /* RecipesFormControllerDelegate.swift */; };
-		34FB6DA41C6A27A10087B86B /* RecipesFormControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FB6DA21C6A27A10087B86B /* RecipesFormControllerDelegate.swift */; };
 		34FB6DA61C6A27BA0087B86B /* RecipesListControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FB6DA51C6A27BA0087B86B /* RecipesListControllerDelegate.swift */; };
-		34FB6DA71C6A27BA0087B86B /* RecipesListControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FB6DA51C6A27BA0087B86B /* RecipesListControllerDelegate.swift */; };
-		34FD92591C7C77E800DA2B9B /* UpdateRecipePresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FD92581C7C77E800DA2B9B /* UpdateRecipePresenterSpy.swift */; };
 		F0DD75247024D8BF654E89F9 /* Pods_Recipes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3943335EAC445F1C552D537 /* Pods_Recipes.framework */; };
 /* End PBXBuildFile section */
 
@@ -619,6 +609,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				349047BF1CA1EE45001CFB04 /* RecipeModel.swift in Sources */,
 				34988AF11C69212C0059287C /* DificultyLevel.swift in Sources */,
 				34988AF21C69212C0059287C /* MeasureUnity.swift in Sources */,
 				34988AF31C69212C0059287C /* RecipeGateway.swift in Sources */,
@@ -640,7 +631,6 @@
 				34988B181C69F41D0059287C /* RecipeGatewayRealm.swift in Sources */,
 				34D44A3D1C93D92300E9D09B /* Equatable+RecipeStruct.swift in Sources */,
 				342DCE691C68047100E6659E /* NavigationViewController.swift in Sources */,
-				34312B7D1C6AE0CA002EFD95 /* RecipeModel.swift in Sources */,
 				3425BCA61C68AED800A7662F /* RecipesListDelegate.swift in Sources */,
 				34CB819E1C68F93100BB2EC3 /* UIViewAutoLayoutExtension.swift in Sources */,
 				346072C01C6BF88E00A67172 /* ListRecipesIOS.swift in Sources */,
@@ -659,41 +649,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34988AF91C6921590059287C /* DificultyLevel.swift in Sources */,
-				346072A41C6BF28800A67172 /* RecipeModel.swift in Sources */,
-				34D44A3A1C93D46500E9D09B /* Int+IntEnum.swift in Sources */,
-				34988AFA1C6921590059287C /* MeasureUnity.swift in Sources */,
-				349A93F01C7BCF6400EE9177 /* UpdateRecipePresenter.swift in Sources */,
-				34988AFB1C6921590059287C /* RecipeGateway.swift in Sources */,
-				346072BA1C6BF4FD00A67172 /* ListRecipesPresenterSpy.swift in Sources */,
-				34988AFC1C6921590059287C /* CreateRecipePresenter.swift in Sources */,
-				349A93ED1C7BC21600EE9177 /* UpdateRecipeUsecase.swift in Sources */,
-				34EA510A1C6A0EB400E90DB4 /* RecipesListDelegate.swift in Sources */,
-				34988B1C1C69F4580059287C /* CreateRecipePresenterIOS.swift in Sources */,
-				34988AFD1C6921590059287C /* Ingredient.swift in Sources */,
-				346072B61C6BF39A00A67172 /* ListRecipesUsecaseTests.swift in Sources */,
-				34FD92591C7C77E800DA2B9B /* UpdateRecipePresenterSpy.swift in Sources */,
-				34988B0D1C69268D0059287C /* RecipeGatewayFake.swift in Sources */,
-				34FB6DA41C6A27A10087B86B /* RecipesFormControllerDelegate.swift in Sources */,
-				34D44A3E1C93DACD00E9D09B /* Equatable+RecipeStruct.swift in Sources */,
-				34D44A391C93D46200E9D09B /* IntEnumTests.swift in Sources */,
-				346072B81C6BF4DB00A67172 /* ListRecipesPresenter.swift in Sources */,
-				34988B141C692B900059287C /* RecipeError.swift in Sources */,
-				34988AFE1C6921590059287C /* Recipe.swift in Sources */,
-				34988B1D1C69FF070059287C /* RecipesFormController.swift in Sources */,
-				34FB6DA71C6A27BA0087B86B /* RecipesListControllerDelegate.swift in Sources */,
-				3476D6881C9D9D5C00B7A911 /* ColorsSchemes.swift in Sources */,
-				34988AFF1C6921590059287C /* Step.swift in Sources */,
-				3476D6871C9D9D4800B7A911 /* RecipesFormTableViewDelegate.swift in Sources */,
-				349A93EC1C7BC21100EE9177 /* UpdateRecipesUsecaseTests.swift in Sources */,
-				34988B001C6921590059287C /* CreateRecipeUsecase.swift in Sources */,
-				34988AE21C6920130059287C /* CreateRecipeUsecaseTests.swift in Sources */,
-				34988B1F1C69FF260059287C /* UIViewAutoLayoutExtension.swift in Sources */,
-				34988B1E1C69FF1A0059287C /* RecipesFormTableViewDataSource.swift in Sources */,
-				34D04AEA1C96FA2D00390325 /* UpdateRecipePresenterIOS.swift in Sources */,
-				346072BD1C6BF5D300A67172 /* ListRecipesUsecase.swift in Sources */,
-				34988B031C6924AA0059287C /* CreateRecipePresenterSpy.swift in Sources */,
-				34988B191C69F41D0059287C /* RecipeGatewayRealm.swift in Sources */,
+				349047D11CA1EFA0001CFB04 /* IntEnumTests.swift in Sources */,
+				349047D21CA1EFA0001CFB04 /* RecipeGatewayFake.swift in Sources */,
+				349047D31CA1EFA0001CFB04 /* CreateRecipePresenterSpy.swift in Sources */,
+				349047D41CA1EFA0001CFB04 /* ListRecipesPresenterSpy.swift in Sources */,
+				349047D51CA1EFA0001CFB04 /* UpdateRecipePresenterSpy.swift in Sources */,
+				349047D61CA1EFA0001CFB04 /* CreateRecipeUsecaseTests.swift in Sources */,
+				349047D71CA1EFA0001CFB04 /* ListRecipesUsecaseTests.swift in Sources */,
+				349047D81CA1EFA0001CFB04 /* UpdateRecipesUsecaseTests.swift in Sources */,
+				349047C01CA1EF88001CFB04 /* Int+IntEnum.swift in Sources */,
+				349047C11CA1EF88001CFB04 /* Equatable+RecipeStruct.swift in Sources */,
+				349047C21CA1EF88001CFB04 /* RecipesFormControllerDelegate.swift in Sources */,
+				349047C31CA1EF88001CFB04 /* RecipesListControllerDelegate.swift in Sources */,
+				349047C41CA1EF88001CFB04 /* DificultyLevel.swift in Sources */,
+				349047C51CA1EF88001CFB04 /* MeasureUnity.swift in Sources */,
+				349047C61CA1EF88001CFB04 /* RecipeError.swift in Sources */,
+				349047C71CA1EF88001CFB04 /* RecipeGateway.swift in Sources */,
+				349047C81CA1EF88001CFB04 /* CreateRecipePresenter.swift in Sources */,
+				349047C91CA1EF88001CFB04 /* ListRecipesPresenter.swift in Sources */,
+				349047CA1CA1EF88001CFB04 /* UpdateRecipePresenter.swift in Sources */,
+				349047CB1CA1EF88001CFB04 /* Ingredient.swift in Sources */,
+				349047CC1CA1EF88001CFB04 /* Recipe.swift in Sources */,
+				349047CD1CA1EF88001CFB04 /* Step.swift in Sources */,
+				349047CE1CA1EF88001CFB04 /* CreateRecipeUsecase.swift in Sources */,
+				349047CF1CA1EF88001CFB04 /* ListRecipesUsecase.swift in Sources */,
+				349047D01CA1EF88001CFB04 /* UpdateRecipeUsecase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
