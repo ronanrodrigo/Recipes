@@ -10,12 +10,8 @@ import Foundation
 import UIKit
 
 class IngredientsFormController: UIViewController {
-    var label: UILabel!
-    
-    override func viewDidAppear(animated: Bool) {
-        label = UILabel(frame: view.frame)
-        label.text = "Hello"
-        view.addSubview(label)
+    override func viewDidLoad() {
+        navigationItem.title = "Ingredient"
+        view.backgroundColor = ColorPalette.background
     }
-    
 }
