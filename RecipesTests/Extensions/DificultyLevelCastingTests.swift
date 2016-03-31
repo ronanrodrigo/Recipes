@@ -8,7 +8,7 @@
 
 import XCTest
 
-class IntEnumTests: XCTestCase {
+class DificultyLevelCastingTests: XCTestCase {
     
     func testShouldReturnEasyWhenZero() {
         let easyInt = 0

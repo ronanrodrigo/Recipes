@@ -41,7 +41,7 @@
 		349047CE1CA1EF88001CFB04 /* CreateRecipeUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34988AF01C69210B0059287C /* CreateRecipeUsecase.swift */; };
 		349047CF1CA1EF88001CFB04 /* ListRecipesUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346072BC1C6BF5D300A67172 /* ListRecipesUsecase.swift */; };
 		349047D01CA1EF88001CFB04 /* UpdateRecipeUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349A93E91C7BC1A500EE9177 /* UpdateRecipeUsecase.swift */; };
-		349047D11CA1EFA0001CFB04 /* IntEnumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D44A381C93D46200E9D09B /* IntEnumTests.swift */; };
+		349047D11CA1EFA0001CFB04 /* DificultyLevelCastingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D44A381C93D46200E9D09B /* DificultyLevelCastingTests.swift */; };
 		349047D21CA1EFA0001CFB04 /* RecipeGatewayFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34988B0C1C69268D0059287C /* RecipeGatewayFake.swift */; };
 		349047D31CA1EFA0001CFB04 /* CreateRecipePresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34988B021C6924AA0059287C /* CreateRecipePresenterSpy.swift */; };
 		349047D41CA1EFA0001CFB04 /* ListRecipesPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346072B91C6BF4FD00A67172 /* ListRecipesPresenterSpy.swift */; };
@@ -123,7 +123,7 @@
 		349A93EE1C7BCED700EE9177 /* UpdateRecipePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateRecipePresenter.swift; sourceTree = "<group>"; };
 		34CB819D1C68F93100BB2EC3 /* UIViewAutoLayoutExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewAutoLayoutExtension.swift; sourceTree = "<group>"; };
 		34D44A351C93D33C00E9D09B /* Int+IntEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+IntEnum.swift"; sourceTree = "<group>"; };
-		34D44A381C93D46200E9D09B /* IntEnumTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntEnumTests.swift; sourceTree = "<group>"; };
+		34D44A381C93D46200E9D09B /* DificultyLevelCastingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DificultyLevelCastingTests.swift; sourceTree = "<group>"; };
 		34D44A3B1C93D91C00E9D09B /* Equatable+RecipeStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Equatable+RecipeStruct.swift"; sourceTree = "<group>"; };
 		34FB6DA21C6A27A10087B86B /* RecipesFormControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesFormControllerDelegate.swift; sourceTree = "<group>"; };
 		34FB6DA51C6A27BA0087B86B /* RecipesListControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesListControllerDelegate.swift; sourceTree = "<group>"; };
@@ -425,7 +425,7 @@
 		34D44A371C93D43900E9D09B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				34D44A381C93D46200E9D09B /* IntEnumTests.swift */,
+				34D44A381C93D46200E9D09B /* DificultyLevelCastingTests.swift */,
 			);
 			name = Extensions;
 			path = RecipesTests/Extensions;
@@ -649,7 +649,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				349047D11CA1EFA0001CFB04 /* IntEnumTests.swift in Sources */,
+				349047D11CA1EFA0001CFB04 /* DificultyLevelCastingTests.swift in Sources */,
 				349047D21CA1EFA0001CFB04 /* RecipeGatewayFake.swift in Sources */,
 				349047D31CA1EFA0001CFB04 /* CreateRecipePresenterSpy.swift in Sources */,
 				349047D41CA1EFA0001CFB04 /* ListRecipesPresenterSpy.swift in Sources */,
