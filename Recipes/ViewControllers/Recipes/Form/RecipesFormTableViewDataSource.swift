@@ -107,7 +107,7 @@ class RecipesFormTableViewDataSource: NSObject, UITableViewDataSource {
     
     func disclosureIndicatorCell(cell: UITableViewCell, text: String) {
         cell.textLabel?.text = text
-        cell.textLabel?.textColor = UIColor.secondaryText()
+        cell.textLabel?.textColor = ColorPalete.secondaryText
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
     }
 }

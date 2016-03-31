@@ -30,7 +30,7 @@ class NavigationViewController: UINavigationController, RecipesListControllerDel
     func customizeNavigationController() {
         navigationBar.tintColor = UIColor.whiteColor()
         navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
-        navigationBar.barTintColor = UIColor.primary()
+        navigationBar.barTintColor = ColorPalete.primary
     }
     
     // MARK: RecipesListControllerDelegate
