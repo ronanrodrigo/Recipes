@@ -10,10 +10,12 @@ protocol Ingredient {
     var title: String { get }
     var quantity: Double { get }
     var measureUnity: MeasureUnity { get }
+    var recipe: Recipe { get }
 }
 
 struct IngredientStruct: Ingredient {
     var title: String
     var quantity: Double
     var measureUnity: MeasureUnity
+    var recipe: Recipe
 }
