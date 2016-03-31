@@ -30,6 +30,8 @@ class CreateRecipeUsecaseTests: XCTestCase {
     func testShouldCreateRecipeWithAllInfos() {
         usecase.create(recipe)
         
+        let recipes = gateway.list()
+        XCTAssertEqual(1, recipes.count)
         XCTAssertTrue(presenter.showedSpy)
     }
 }
