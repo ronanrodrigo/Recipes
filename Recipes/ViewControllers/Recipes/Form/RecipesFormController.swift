@@ -41,7 +41,7 @@ class RecipesFormController: UIViewController {
         createTableView()
         configureNavigationItem()
         
-        tableView.backgroundColor = ColorPalete.background
+        tableView.backgroundColor = ColorPalette.background
         tableView.backgroundView = nil
     }
     

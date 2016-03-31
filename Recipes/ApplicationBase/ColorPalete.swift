@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum ColorPalete {
+enum ColorPalette {
     static let primary = UIColor(red:1, green:0.76, blue:0.03, alpha:1)
     static let secondary = UIColor(red:1, green:0.88, blue:0.51, alpha:1)
     static let accent = UIColor(red:1, green:0.25, blue:0.51, alpha:1)
