@@ -1,0 +1,1 @@
+set -o pipefail && xcodebuild -workspace Recipes.xcworkspace -scheme Recipes build test -destination "platform=iOS Simulator,name=iPhone 6,OS=latest" -derivedDataPath ~/Codes | xcpretty --color --report html --output ~/Codes/xcode-test-results-Recipes.html
