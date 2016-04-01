@@ -8,39 +8,11 @@
 
 import XCTest
 
-class CreateIngredientInRecipePresenterSpy: CreateIngredientInRecipePresenter {
-    var showedSpy = false
-
-    func show(ingredient: Ingredient) {
-        showedSpy = true
-    }
-}
-
-class IngredientGatewayFake: IngredientGateway {
-    var ingredients: [Ingredient] = []
-    
-    func create(ingredient: Ingredient) -> Ingredient {
-        ingredients.append(ingredient)
-        return ingredient
-    }
-    
-    func update(ingredient: Ingredient) -> Ingredient {
-        return ingredient
-    }
-    
-    func list() -> [Ingredient] {
-        return ingredients
-    }
-}
-
 class CreateIngredientInRecipeUsecaseTests: XCTestCase {
     var ingredient: Ingredient!
     var usecase: CreateIngredientInRecipeUsecase!
     var presenter: CreateIngredientInRecipePresenterSpy!
     var gateway: IngredientGatewayFake!
-    
-    var recipe: Recipe!
-    var recipeGateway: RecipeGatewayFake!
     
     override func setUp() {
         super.setUp()
@@ -49,8 +21,7 @@ class CreateIngredientInRecipeUsecaseTests: XCTestCase {
         gateway = IngredientGatewayFake()
         usecase = CreateIngredientInRecipeUsecase(presenter: presenter, gateway: gateway)
 
-        recipeGateway = RecipeGatewayFake()
-        recipe = recipeGateway.create(
+        let recipe = RecipeGatewayFake().create(
             RecipeStruct(id: 0,
                 title: "Pizza",
                 brief: "",
