@@ -10,7 +10,44 @@ import Foundation
 import UIKit
 
 class IngredientsFormController: UIViewController {
+    var recipe: Recipe?
+    var tableView: UITableView!
+    var tableViewDataSource: IngredientsFormTableViewDataSource!
+    let fieldsCellIdentifier = "FieldsCell"
+        
+    init(recipe: Recipe?) {
+        self.recipe = recipe
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+
     override func viewDidLoad() {
+        configureTableView()
+        configureTableViewCell()
+        configureTableViewDataSource()
+        configureNavigationItem()
+    }
+    
+    func configureTableView() {
+        tableView = UITableView(frame: view.frame, style: .Grouped)
+        tableView.backgroundColor = ColorPalette.background
+        tableView.backgroundView = nil
+        view.addSubview(tableView)
+    }
+    
+    func configureTableViewDataSource() {
+        tableViewDataSource = IngredientsFormTableViewDataSource(recipe: recipe, fieldsCellIdentifier: fieldsCellIdentifier)
+        tableView.dataSource = tableViewDataSource
+    }
+    
+    func configureTableViewCell() {
+        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: fieldsCellIdentifier)
+    }
+    
+    func configureNavigationItem() {
         navigationItem.title = "Ingredient"
         view.backgroundColor = ColorPalette.background
     }

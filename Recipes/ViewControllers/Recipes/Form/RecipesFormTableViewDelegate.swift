@@ -11,12 +11,14 @@ import UIKit
 
 class RecipesFormTableViewDelegate: NSObject, UITableViewDelegate {
     var delegate: RecipesFormControllerDelegate
+    var recipe: Recipe?
     
-    init(delegate: RecipesFormControllerDelegate) {
+    init(delegate: RecipesFormControllerDelegate, recipe: Recipe?) {
         self.delegate = delegate
+        self.recipe = recipe
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        delegate.didTapeedAtAddIngredients()
+        delegate.didTapeedAtAddIngredients(recipe)
     }
 }

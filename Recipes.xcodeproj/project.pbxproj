@@ -14,6 +14,7 @@
 		342DCE5A1C67FB1000E6659E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 342DCE581C67FB1000E6659E /* LaunchScreen.storyboard */; };
 		342DCE691C68047100E6659E /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342DCE681C68047100E6659E /* NavigationViewController.swift */; };
 		342DCE6B1C680C9500E6659E /* RecipesListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342DCE6A1C680C9500E6659E /* RecipesListController.swift */; };
+		3435353F1CAF710C0052461A /* IngredientsFormTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3435353E1CAF710C0052461A /* IngredientsFormTableViewDataSource.swift */; };
 		3451BB041C93E7B10077008B /* UpdateRecipePresenterIOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3451BB031C93E7B10077008B /* UpdateRecipePresenterIOS.swift */; };
 		3452F1521C68CAEC00DF68C2 /* RecipesFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3452F1511C68CAEC00DF68C2 /* RecipesFormController.swift */; };
 		3452F1561C68DD3B00DF68C2 /* RecipesFormTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3452F1551C68DD3B00DF68C2 /* RecipesFormTableViewDataSource.swift */; };
@@ -98,6 +99,7 @@
 		342DCE681C68047100E6659E /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		342DCE6A1C680C9500E6659E /* RecipesListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesListController.swift; sourceTree = "<group>"; };
 		34312B7C1C6AE0CA002EFD95 /* RecipeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
+		3435353E1CAF710C0052461A /* IngredientsFormTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientsFormTableViewDataSource.swift; sourceTree = "<group>"; };
 		3451BB031C93E7B10077008B /* UpdateRecipePresenterIOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateRecipePresenterIOS.swift; sourceTree = "<group>"; };
 		3452F1461C68BB3500DF68C2 /* RecipesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3452F14A1C68BB3500DF68C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -306,6 +308,7 @@
 			isa = PBXGroup;
 			children = (
 				3476D6831C9D943C00B7A911 /* IngredientsFormController.swift */,
+				3435353E1CAF710C0052461A /* IngredientsFormTableViewDataSource.swift */,
 			);
 			name = Form;
 			path = Recipes/ViewControllers/Ingredients/Form;
@@ -665,6 +668,7 @@
 				34988B181C69F41D0059287C /* RecipeGatewayRealm.swift in Sources */,
 				34D44A3D1C93D92300E9D09B /* Equatable+RecipeStruct.swift in Sources */,
 				342DCE691C68047100E6659E /* NavigationViewController.swift in Sources */,
+				3435353F1CAF710C0052461A /* IngredientsFormTableViewDataSource.swift in Sources */,
 				3425BCA61C68AED800A7662F /* RecipesListDelegate.swift in Sources */,
 				34CB819E1C68F93100BB2EC3 /* UIViewAutoLayoutExtension.swift in Sources */,
 				346639E01CACB7C7004D70BB /* IngredientGateway.swift in Sources */,
