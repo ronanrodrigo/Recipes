@@ -20,6 +20,6 @@ class RecipesFormTableViewDelegate: NSObject, UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        delegate.didTapeedAtAddIngredients(recipe)
+        delegate.didTapAtAddIngredients(recipe)
     }
 }

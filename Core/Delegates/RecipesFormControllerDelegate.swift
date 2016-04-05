@@ -8,5 +8,5 @@
 
 protocol RecipesFormControllerDelegate {
     func didTapAtSaveRecipe(savedRecipe: Recipe)
-    func didTapeedAtAddIngredients(recipe: Recipe?)
+    func didTapAtAddIngredients(recipe: Recipe?)
 }
