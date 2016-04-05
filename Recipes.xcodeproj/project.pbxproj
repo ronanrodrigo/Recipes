@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		340A5E2A1CAE96CB00AD9A99 /* IngredientGatewayFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340A5E291CAE96CB00AD9A99 /* IngredientGatewayFake.swift */; };
+		340A5E2C1CAE96E500AD9A99 /* CreateIngredientInRecipePresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340A5E2B1CAE96E500AD9A99 /* CreateIngredientInRecipePresenterSpy.swift */; };
 		3425BCA41C68A8FF00A7662F /* RecipesListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3425BCA31C68A8FF00A7662F /* RecipesListDataSource.swift */; };
 		3425BCA61C68AED800A7662F /* RecipesListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3425BCA51C68AED800A7662F /* RecipesListDelegate.swift */; };
 		342DCE551C67FB1000E6659E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342DCE541C67FB1000E6659E /* AppDelegate.swift */; };
@@ -89,6 +91,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		340A5E291CAE96CB00AD9A99 /* IngredientGatewayFake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientGatewayFake.swift; sourceTree = "<group>"; };
+		340A5E2B1CAE96E500AD9A99 /* CreateIngredientInRecipePresenterSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateIngredientInRecipePresenterSpy.swift; sourceTree = "<group>"; };
 		3425BCA31C68A8FF00A7662F /* RecipesListDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesListDataSource.swift; sourceTree = "<group>"; };
 		3425BCA51C68AED800A7662F /* RecipesListDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesListDelegate.swift; sourceTree = "<group>"; };
 		342DCE511C67FB1000E6659E /* Recipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -414,6 +418,7 @@
 				34988B021C6924AA0059287C /* CreateRecipePresenterSpy.swift */,
 				346072B91C6BF4FD00A67172 /* ListRecipesPresenterSpy.swift */,
 				34FD92581C7C77E800DA2B9B /* UpdateRecipePresenterSpy.swift */,
+				340A5E2B1CAE96E500AD9A99 /* CreateIngredientInRecipePresenterSpy.swift */,
 			);
 			name = Presenters;
 			path = RecipesTests/Fakes/Presenters;
@@ -423,6 +428,7 @@
 			isa = PBXGroup;
 			children = (
 				34988B0C1C69268D0059287C /* RecipeGatewayFake.swift */,
+				340A5E291CAE96CB00AD9A99 /* IngredientGatewayFake.swift */,
 			);
 			name = Gateways;
 			path = RecipesTests/Fakes/Gateways;
@@ -695,8 +701,10 @@
 				349047D31CA1EFA0001CFB04 /* CreateRecipePresenterSpy.swift in Sources */,
 				349047D41CA1EFA0001CFB04 /* ListRecipesPresenterSpy.swift in Sources */,
 				349047D51CA1EFA0001CFB04 /* UpdateRecipePresenterSpy.swift in Sources */,
+				340A5E2A1CAE96CB00AD9A99 /* IngredientGatewayFake.swift in Sources */,
 				349047D61CA1EFA0001CFB04 /* CreateRecipeUsecaseTests.swift in Sources */,
 				349047D71CA1EFA0001CFB04 /* ListRecipesUsecaseTests.swift in Sources */,
+				340A5E2C1CAE96E500AD9A99 /* CreateIngredientInRecipePresenterSpy.swift in Sources */,
 				349047D81CA1EFA0001CFB04 /* UpdateRecipesUsecaseTests.swift in Sources */,
 				349047C01CA1EF88001CFB04 /* Int+IntEnum.swift in Sources */,
 				349047C11CA1EF88001CFB04 /* Equatable+RecipeStruct.swift in Sources */,
