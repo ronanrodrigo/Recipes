@@ -38,11 +38,11 @@ class RecipesFormController: UIViewController {
     }
     
     override func viewDidLoad() {
-        createTableView()
+        configureTableView()
+        configureTableViewDataSource()
+        configureTableViewDelegate()
+        configureTableViewCell()
         configureNavigationItem()
-        
-        tableView.backgroundColor = ColorPalette.background
-        tableView.backgroundView = nil
     }
     
     func configureNavigationItem() {
@@ -51,17 +51,14 @@ class RecipesFormController: UIViewController {
         navigationItem.rightBarButtonItem = addButton
     }
     
-    func createTableView() {
+    func configureTableView() {
         tableView = UITableView(frame: view.frame, style: .Grouped)
-        
-        addDataSourceToTableView()
-        addDelegateToTableView()
-        registerCellsToTableView()
-        
+        tableView.backgroundColor = ColorPalette.background
+        tableView.backgroundView = nil
         view.addSubview(tableView)
     }
     
-    func addDataSourceToTableView() {
+    func configureTableViewDataSource() {
         tableViewDataSource = RecipesFormTableViewDataSource(
             recipe: recipe,
             fieldsCellIdentifier: fieldsCellIdentifier,
@@ -71,12 +68,12 @@ class RecipesFormController: UIViewController {
         tableView.dataSource = tableViewDataSource
     }
     
-    func addDelegateToTableView() {
-        tableViewDelegate = RecipesFormTableViewDelegate(delegate: delegate!)
+    func configureTableViewDelegate() {
+        tableViewDelegate = RecipesFormTableViewDelegate(delegate: delegate!, recipe: recipe)
         tableView.delegate = tableViewDelegate
     }
     
-    func registerCellsToTableView() {
+    func configureTableViewCell() {
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: fieldsCellIdentifier)
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: ingredientsCellIdentifier)
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: stepsCellIdentifier)
