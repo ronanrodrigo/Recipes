@@ -9,9 +9,14 @@
 import Foundation
 import UIKit
 
-class RecipesFormController: UIViewController {
+protocol RecipesAndIngredientsFormDelegate {
+    func willSaveIngredient(ingredient: Ingredient)
+}
+
+class RecipesFormController: UIViewController, RecipesAndIngredientsFormDelegate {
     var delegate: RecipesFormControllerDelegate?
     var recipe: Recipe?
+    var ingredients: [Ingredient] = []
     
     var tableView: UITableView!
     var tableViewDataSource: RecipesFormTableViewDataSource?
@@ -69,7 +74,7 @@ class RecipesFormController: UIViewController {
     }
     
     func configureTableViewDelegate() {
-        tableViewDelegate = RecipesFormTableViewDelegate(delegate: delegate!, recipe: recipe)
+        tableViewDelegate = RecipesFormTableViewDelegate(delegate: delegate!, recipe: recipe, recipesAndIngredientsFormDelegate: self)
         tableView.delegate = tableViewDelegate
     }
     
@@ -100,5 +105,9 @@ class RecipesFormController: UIViewController {
         }
     }
     
-    
+    // MARK: RecipesAndIngredientsFormDelegate
+
+    func willSaveIngredient(ingredient: Ingredient) {
+        ingredients.append(ingredient)
+    }
 }

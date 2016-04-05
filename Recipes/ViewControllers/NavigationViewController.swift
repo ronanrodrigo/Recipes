@@ -51,8 +51,12 @@ class NavigationViewController: UINavigationController, RecipesListControllerDel
         popViewControllerAnimated(true)
     }
     
-    func didTapAtAddIngredients(recipe: Recipe?) {
-        let ingredientsFomrController = IngredientsFormController(recipe: recipe, delegate: self)
+    func didTapAtAddIngredients(recipe: Recipe?, recipesAndIngredientsFormDelegate: RecipesAndIngredientsFormDelegate) {
+        let ingredientsFomrController = IngredientsFormController(
+            recipe: recipe,
+            delegate: self,
+            recipesAndIngredientsFormDelegate: recipesAndIngredientsFormDelegate
+        )
         pushViewController(ingredientsFomrController, animated: true)
     }
     

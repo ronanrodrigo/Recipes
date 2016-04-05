@@ -12,13 +12,15 @@ import UIKit
 class IngredientsFormController: UIViewController {
     var recipe: Recipe?
     var delegate: IngredientsFormControllerDelegate?
+    var recipesAndIngredientsFormDelegate: RecipesAndIngredientsFormDelegate?
     var tableView: UITableView!
     var tableViewDataSource: IngredientsFormTableViewDataSource!
     let fieldsCellIdentifier = "FieldsCell"
         
-    init(recipe: Recipe?, delegate: IngredientsFormControllerDelegate) {
+    init(recipe: Recipe?, delegate: IngredientsFormControllerDelegate, recipesAndIngredientsFormDelegate: RecipesAndIngredientsFormDelegate) {
         self.recipe = recipe
         self.delegate = delegate
+        self.recipesAndIngredientsFormDelegate = recipesAndIngredientsFormDelegate
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -63,7 +65,8 @@ class IngredientsFormController: UIViewController {
             measureUnity: MeasureUnity.KG,
             recipe: recipe
         )
-        self.delegate?.didTapAtSaveIngredient(ingredient)
+        delegate?.didTapAtSaveIngredient(ingredient)
+        recipesAndIngredientsFormDelegate?.willSaveIngredient(ingredient)
     }
 
 }
