@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NavigationViewController: UINavigationController, RecipesListControllerDelegate, RecipesFormControllerDelegate {
+class NavigationViewController: UINavigationController, RecipesListControllerDelegate, RecipesFormControllerDelegate, IngredientsFormControllerDelegate {
     var recipeListController: RecipesListController!
     
     override func viewDidLoad() {
@@ -52,8 +52,13 @@ class NavigationViewController: UINavigationController, RecipesListControllerDel
     }
     
     func didTapeedAtAddIngredients(recipe: Recipe?) {
-        let ingredientsFomrController = IngredientsFormController(recipe: recipe)
+        let ingredientsFomrController = IngredientsFormController(recipe: recipe, delegate: self)
         pushViewController(ingredientsFomrController, animated: true)
     }
     
+    // MARK: IngredientsFormControllerDelegate
+    
+    func didTapAtSaveIngredient(savedIngredient: Ingredient) {
+        popViewControllerAnimated(true)
+    }
 }

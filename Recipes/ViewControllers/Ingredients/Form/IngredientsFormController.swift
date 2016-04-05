@@ -11,12 +11,14 @@ import UIKit
 
 class IngredientsFormController: UIViewController {
     var recipe: Recipe?
+    var delegate: IngredientsFormControllerDelegate?
     var tableView: UITableView!
     var tableViewDataSource: IngredientsFormTableViewDataSource!
     let fieldsCellIdentifier = "FieldsCell"
         
-    init(recipe: Recipe?) {
+    init(recipe: Recipe?, delegate: IngredientsFormControllerDelegate) {
         self.recipe = recipe
+        self.delegate = delegate
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -50,5 +52,18 @@ class IngredientsFormController: UIViewController {
     func configureNavigationItem() {
         navigationItem.title = "Ingredient"
         view.backgroundColor = ColorPalette.background
+        let addButton = UIBarButtonItem(barButtonSystemItem: .Save, target: self, action: #selector(didTapAtSaveIngredient))
+        navigationItem.rightBarButtonItem = addButton
     }
+    
+    func didTapAtSaveIngredient(){
+        let ingredient = IngredientStruct(
+            title: tableViewDataSource.title.text!,
+            quantity: Double(tableViewDataSource.quantity.text!)!,
+            measureUnity: MeasureUnity.KG,
+            recipe: recipe
+        )
+        self.delegate?.didTapAtSaveIngredient(ingredient)
+    }
+
 }

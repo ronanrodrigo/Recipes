@@ -75,6 +75,7 @@
 		34CB819E1C68F93100BB2EC3 /* UIViewAutoLayoutExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CB819D1C68F93100BB2EC3 /* UIViewAutoLayoutExtension.swift */; };
 		34D44A361C93D33C00E9D09B /* Int+IntEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D44A351C93D33C00E9D09B /* Int+IntEnum.swift */; };
 		34D44A3D1C93D92300E9D09B /* Equatable+RecipeStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D44A3B1C93D91C00E9D09B /* Equatable+RecipeStruct.swift */; };
+		34F4FDB81CB33D7C00F4BBC4 /* IngredientsFormControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F4FDB71CB33D7C00F4BBC4 /* IngredientsFormControllerDelegate.swift */; };
 		34FB6DA31C6A27A10087B86B /* RecipesFormControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FB6DA21C6A27A10087B86B /* RecipesFormControllerDelegate.swift */; };
 		34FB6DA61C6A27BA0087B86B /* RecipesListControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FB6DA51C6A27BA0087B86B /* RecipesListControllerDelegate.swift */; };
 		F0DD75247024D8BF654E89F9 /* Pods_Recipes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3943335EAC445F1C552D537 /* Pods_Recipes.framework */; };
@@ -142,6 +143,7 @@
 		34D44A351C93D33C00E9D09B /* Int+IntEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+IntEnum.swift"; sourceTree = "<group>"; };
 		34D44A381C93D46200E9D09B /* DificultyLevelCastingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DificultyLevelCastingTests.swift; sourceTree = "<group>"; };
 		34D44A3B1C93D91C00E9D09B /* Equatable+RecipeStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Equatable+RecipeStruct.swift"; sourceTree = "<group>"; };
+		34F4FDB71CB33D7C00F4BBC4 /* IngredientsFormControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientsFormControllerDelegate.swift; sourceTree = "<group>"; };
 		34FB6DA21C6A27A10087B86B /* RecipesFormControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesFormControllerDelegate.swift; sourceTree = "<group>"; };
 		34FB6DA51C6A27BA0087B86B /* RecipesListControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesListControllerDelegate.swift; sourceTree = "<group>"; };
 		34FD92581C7C77E800DA2B9B /* UpdateRecipePresenterSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateRecipePresenterSpy.swift; sourceTree = "<group>"; };
@@ -478,6 +480,7 @@
 			children = (
 				34FB6DA21C6A27A10087B86B /* RecipesFormControllerDelegate.swift */,
 				34FB6DA51C6A27BA0087B86B /* RecipesListControllerDelegate.swift */,
+				34F4FDB71CB33D7C00F4BBC4 /* IngredientsFormControllerDelegate.swift */,
 			);
 			name = Delegates;
 			path = Core/Delegates;
@@ -678,6 +681,7 @@
 				3425BCA61C68AED800A7662F /* RecipesListDelegate.swift in Sources */,
 				34CB819E1C68F93100BB2EC3 /* UIViewAutoLayoutExtension.swift in Sources */,
 				346639E01CACB7C7004D70BB /* IngredientGateway.swift in Sources */,
+				34F4FDB81CB33D7C00F4BBC4 /* IngredientsFormControllerDelegate.swift in Sources */,
 				346072C01C6BF88E00A67172 /* ListRecipesIOS.swift in Sources */,
 				34988B1B1C69F4580059287C /* CreateRecipePresenterIOS.swift in Sources */,
 				342DCE6B1C680C9500E6659E /* RecipesListController.swift in Sources */,
