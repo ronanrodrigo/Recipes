@@ -37,7 +37,6 @@
 		349047BF1CA1EE45001CFB04 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34312B7C1C6AE0CA002EFD95 /* RecipeModel.swift */; };
 		349047C01CA1EF88001CFB04 /* Int+IntEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D44A351C93D33C00E9D09B /* Int+IntEnum.swift */; };
 		349047C11CA1EF88001CFB04 /* Equatable+RecipeStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D44A3B1C93D91C00E9D09B /* Equatable+RecipeStruct.swift */; };
-		349047C21CA1EF88001CFB04 /* RecipesFormControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FB6DA21C6A27A10087B86B /* RecipesFormControllerDelegate.swift */; };
 		349047C31CA1EF88001CFB04 /* RecipesListControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FB6DA51C6A27BA0087B86B /* RecipesListControllerDelegate.swift */; };
 		349047C41CA1EF88001CFB04 /* DificultyLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34988AE51C69210B0059287C /* DificultyLevel.swift */; };
 		349047C51CA1EF88001CFB04 /* MeasureUnity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34988AE61C69210B0059287C /* MeasureUnity.swift */; };
@@ -734,7 +733,6 @@
 				349047D81CA1EFA0001CFB04 /* UpdateRecipesUsecaseTests.swift in Sources */,
 				349047C01CA1EF88001CFB04 /* Int+IntEnum.swift in Sources */,
 				349047C11CA1EF88001CFB04 /* Equatable+RecipeStruct.swift in Sources */,
-				349047C21CA1EF88001CFB04 /* RecipesFormControllerDelegate.swift in Sources */,
 				346639DB1CACB31F004D70BB /* CreateIngredientInRecipeUsecase.swift in Sources */,
 				349047C31CA1EF88001CFB04 /* RecipesListControllerDelegate.swift in Sources */,
 				349047C41CA1EF88001CFB04 /* DificultyLevel.swift in Sources */,
