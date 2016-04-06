@@ -9,10 +9,6 @@
 import Foundation
 import UIKit
 
-protocol RecipesAndIngredientsFormDelegate {
-    func willSaveIngredient(ingredient: Ingredient)
-}
-
 class RecipesFormController: UIViewController, RecipesAndIngredientsFormDelegate {
     var delegate: RecipesFormControllerDelegate?
     var recipe: Recipe?
