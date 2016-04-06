@@ -208,6 +208,26 @@
 			path = Recipes/ApplicationBase;
 			sourceTree = SOURCE_ROOT;
 		};
+		3428E76D1CB5CD84006CC90E /* Ingredients */ = {
+			isa = PBXGroup;
+			children = (
+				346639D91CACB31F004D70BB /* CreateIngredientInRecipeUsecase.swift */,
+			);
+			name = Ingredients;
+			path = Core/Usecases/Ingredients;
+			sourceTree = SOURCE_ROOT;
+		};
+		3428E76E1CB5CD89006CC90E /* Recipes */ = {
+			isa = PBXGroup;
+			children = (
+				34988AF01C69210B0059287C /* CreateRecipeUsecase.swift */,
+				346072BC1C6BF5D300A67172 /* ListRecipesUsecase.swift */,
+				349A93E91C7BC1A500EE9177 /* UpdateRecipeUsecase.swift */,
+			);
+			name = Recipes;
+			path = Core/Usecases/Recipes;
+			sourceTree = SOURCE_ROOT;
+		};
 		342DCE481C67FB1000E6659E = {
 			isa = PBXGroup;
 			children = (
@@ -398,10 +418,8 @@
 		34988AEF1C69210B0059287C /* Usecases */ = {
 			isa = PBXGroup;
 			children = (
-				34988AF01C69210B0059287C /* CreateRecipeUsecase.swift */,
-				346072BC1C6BF5D300A67172 /* ListRecipesUsecase.swift */,
-				349A93E91C7BC1A500EE9177 /* UpdateRecipeUsecase.swift */,
-				346639D91CACB31F004D70BB /* CreateIngredientInRecipeUsecase.swift */,
+				3428E76E1CB5CD89006CC90E /* Recipes */,
+				3428E76D1CB5CD84006CC90E /* Ingredients */,
 			);
 			path = Usecases;
 			sourceTree = "<group>";
