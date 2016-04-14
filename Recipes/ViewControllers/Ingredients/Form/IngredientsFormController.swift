@@ -54,17 +54,21 @@ class IngredientsFormController: UIViewController {
     func configureNavigationItem() {
         navigationItem.title = "Ingredient"
         view.backgroundColor = ColorPalette.background
-        let addButton = UIBarButtonItem(barButtonSystemItem: .Save, target: self, action: #selector(didTapAtSaveIngredient))
+        let addButton = UIBarButtonItem(barButtonSystemItem: .Save, target: self, action: #selector(willSaveIngredient))
         navigationItem.rightBarButtonItem = addButton
     }
     
-    func didTapAtSaveIngredient(){
+    func willSaveIngredient(){
+        guard let title = tableViewDataSource.title.text, let quantity = Double(tableViewDataSource.quantity.text!)
+            else { return }
+
         let ingredient = IngredientStruct(
-            title: tableViewDataSource.title.text!,
-            quantity: Double(tableViewDataSource.quantity.text!)!,
+            title: title,
+            quantity: quantity,
             measureUnity: MeasureUnity.KG,
             recipe: recipe
         )
+        
         delegate?.didTapAtSaveIngredient(ingredient)
         recipesAndIngredientsFormDelegate?.willSaveIngredient(ingredient)
     }
